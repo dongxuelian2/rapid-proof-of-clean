@@ -13,7 +13,7 @@ This repository is intentionally limited to project infrastructure, challenge in
 
 ## Repository policy
 
-- GitHub visibility is private by policy. The remote repository remains pending until GitHub CLI authentication is repaired.
+- The GitHub repository is private by policy and is initialized at `https://github.com/dongxuelian2/rapid-proof-of-clean`.
 - Original challenge materials with unclear redistribution, copyright, confidentiality, or download terms stay outside version control.
 - Secrets, credentials, cookies, tokens, and API keys never belong in this repository.
 - No technical route has been selected during Phase 0.

@@ -18,7 +18,7 @@ The project may receive restricted challenge material and unpublished research n
 
 **Status**
 
-Accepted; GitHub remote creation is pending CLI re-authentication.
+Accepted; the private GitHub remote was created and the initial `main` commit was pushed.
 
 ## D-002
 

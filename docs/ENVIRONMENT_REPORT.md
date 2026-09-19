@@ -22,7 +22,7 @@ Generated during repository initialization on 2026-09-19 (Asia/Shanghai). Values
 
 ## GitHub CLI authentication
 
-`gh auth status` found an existing account configuration, but the active token was invalid. No remote repository was created and no GitHub write operation was attempted.
+The first restricted-process probe reported an invalid cached token, but the final host-context check reported an active login for `dongxuelian2` with `repo` and `workflow` scopes. The private remote was created and the initial `main` commit was pushed successfully. No credential material was written to the repository.
 
 ## Project Python environment
 
@@ -49,7 +49,7 @@ These versions were reported by `scripts/check_env.py` from the project virtual 
 ## Missing or unusable components
 
 - A usable system-wide Python command is unavailable. This is intentionally not repaired globally.
-- GitHub CLI re-authentication is required before creating or pushing the private remote.
+- The final GitHub CLI session is usable; no further authentication action is required for the completed initialization.
 
 ## Changes made during this initialization
 
