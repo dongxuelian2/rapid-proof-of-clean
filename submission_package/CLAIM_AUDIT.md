@@ -20,7 +20,7 @@ or a forecast of field performance.
 | Performance Expectations | No physical experiment, real LOD, sensitivity, specificity, repeatability or site performance has been established | Project evidence inventory | Accurate statement of current evidence | Any measured physical detection capability |
 | Performance Expectations | No microbial, sterility or hygienic-safety claim is made | Modality scope and claim ladder | Optical proxy only | Microbial absence, sterility or regulatory compliance |
 | Performance Expectations | The most conservative 25 m² timing scenario is about 31 minutes | Assumption-driven `experiments/results/adaptive_coverage_time_model.csv` | Planning estimate; its upper scenario exceeds a 30-minute target | Measured scan time, guaranteed 25 m² coverage or operator throughput |
-| Experience | Participant must supply their own verifiable experience | Explicit human-completion placeholder | No personal experience is asserted | Invented qualifications or facilities |
+| Experience | Education, skills, computational work, physical-validation limits and proposed partner contribution stated by the participant | Self-reported statement supplied for this proposal | May be stated as supplied after participant review for accuracy | Independently verified credentials, dedicated optical laboratory access or physical validation data |
 | Solution Risks | Shared reference drift can make clean origin unidentifiable; prior-art/FTO is unverified | Synthetic reference stress; scoped patent search including WO2025261682A1 | Known design and legal uncertainty | Independent clean-anchor guarantee, novelty opinion or FTO |
 | Development Timeline and Capability | Four proposed stages depend on partner access and physical validation | Future work plan and identified asset/partner needs | Planning estimate only; participant's role must be confirmed; no physical stage is complete | Committed dates, invented experience or current prototype/field status |
 | Online References | Selected literature, patent and product sources provide context | Linked sources in proposal | Background and prior-art context | Legal analysis or transfer of another system's performance |
@@ -61,8 +61,8 @@ strata. No denominator in this section represents independent physical samples.
   no real LOD or sensitivity/specificity is known, no microbial or sterility claim
   is made, physical validation remains required, and observation-matched residues
   cannot be distinguished.
-- The Experience placeholder is participant-only and must be completed with
-  verifiable facts before submission.
+- The Experience section is participant-provided and self-reported; the
+  participant must verify its accuracy before submission.
 - Participation type, eligibility, agreement acceptance, IP terms and any
   required AI disclosure also remain human-only checks in
   `HUMAN_FINAL_CHECKLIST.md`.

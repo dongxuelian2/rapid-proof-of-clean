@@ -18,9 +18,7 @@ performance, and PASS carries no microbial, sterility or hygienic-safety meaning
 Observation-matched residue remains a fundamental measurement limitation, and
 physical validation is required before any deployment claim.
 
-Before submission, complete `HUMAN_FINAL_CHECKLIST.md`. Replace the Experience
-placeholder with verifiable participant-provided facts; choose the participation
-type and partnering preference; enter TRL 2 as the solution level; and confirm
-that the proposed partnering role in the timeline matches the participant's
-actual capabilities. Personally verify eligibility, agreement/IP terms and any
-required AI disclosure. Do not submit the placeholder unchanged.
+Before submission, complete `HUMAN_FINAL_CHECKLIST.md`. Review the Experience
+statement supplied by the participant for accuracy; choose the participation
+type and partnering preference; enter TRL 2 as the solution level; and personally
+verify eligibility, agreement/IP terms and any required AI disclosure.

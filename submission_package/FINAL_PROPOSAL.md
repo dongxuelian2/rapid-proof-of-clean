@@ -88,8 +88,25 @@ in any release claim.
 
 ## Experience
 
-**[PARTICIPANT TO COMPLETE: add only verifiable relevant experience, role, and
-available facilities or partner access. Do not submit this placeholder unchanged.]**
+I am an undergraduate student in Automation at Hebei University of Technology,
+with experience in mathematical modeling, control systems, computational research,
+reproducible Python development, and AI-assisted technical investigation.
+
+For this project, I developed and iteratively audited the proposed concept through
+a reproducible computational research pipeline. My work included active-optical
+measurement modeling, reference-integrity logic, bounded PASS/FLAG/UNKNOWN
+decision rules, sequential acquisition, multiscale spatial release criteria,
+domain-shift simulation, adversarial false-clean testing, prior-art analysis, and
+automated regression testing.
+
+The current solution is intentionally submitted as a TRL 2 concept rather than a
+validated physical prototype. I do not currently have dedicated optical
+laboratory facilities or physical validation data for this system. If partnering
+with Diversey, I would contribute the computational model, decision architecture,
+software implementation, failure-mode analysis, reproducible evaluation
+framework, and validation protocol, while working with relevant partners on
+optical hardware, representative surfaces and residues, independent ground truth,
+and field validation.
 
 ## Solution Risks
 
@@ -144,8 +161,7 @@ audit trail, coverage model and preregistered validation plan. Delivery also nee
 optical and mechanical engineering, surface metrology, residue preparation,
 independent ground-truth methods, professional-site access and human-factors
 review. If partnering, the proposed technical contribution is to carry the
-reference and release logic into the validation workflow; the participant should
-confirm that role against their own capabilities before submission.
+reference and release logic into the validation workflow.
 
 ## Online References
 
