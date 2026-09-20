@@ -1,0 +1,30 @@
+{
+  "evidence_type": "ASSUMPTION_DRIVEN_PHYSICALLY_MOTIVATED_SIMULATION_ONLY",
+  "materials": ["glass", "stainless_steel", "hdpe", "glazed_ceramic"],
+  "residues": [
+    "clean",
+    "water_film",
+    "oil_film",
+    "protein_smear",
+    "detergent_crystals",
+    "particles",
+    "primary_degenerate_film",
+    "matched_invisible"
+  ],
+  "replicates": 6,
+  "fixed_seed": 20260920,
+  "wavelengths_nm": [470, 550, 850],
+  "angles_deg": [15, 55],
+  "polarizations": ["s", "p"],
+  "reference_noise_log": 0.008,
+  "sample_noise_log": 0.012,
+  "reference_consistency_log": 0.045,
+  "pass_bound_log": 0.04,
+  "flag_bound_log": 0.095,
+  "limitations": [
+    "Optical constants and residue morphology are assumption-driven, not fitted to project hardware data.",
+    "The Fresnel film model is coherent and planar; real residue can be rough, discontinuous, absorbing, or fluorescent.",
+    "The structured-light blur proxy and diversity reflectance model are coupled heuristically.",
+    "A matched-invisible construction remains observationally identical to clean in every retained state."
+  ]
+}

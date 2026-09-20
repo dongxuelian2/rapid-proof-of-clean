@@ -5,13 +5,14 @@ Research and submission workspace for the Rapid Proof of Clean innovation challe
 ## Current status
 
 ```text
-SUBMISSION_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION
-TRL 2 — proposal and reproducible computational package complete; no physical experiment executed.
+SIMULATION_V2_CANDIDATE_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION
+TRL 2 — physically motivated simulation candidate complete; no physical experiment executed.
 ```
 
 The active direction is reference-guarded multi-frequency active-reflectance
 screening with bounded inference, explicit abstention, coverage accounting and a
-remeasurement path. All performance evidence remains synthetic or assumption-driven.
+remeasurement path. Candidate v2 adds angle, wavelength and polarization diversity.
+All performance evidence remains synthetic or assumption-driven.
 
 ## Continuation entry
 
@@ -45,6 +46,10 @@ The bootstrap script uses the installed `uv` tool when available, creates `.venv
 ## Repository map
 
 - `docs/` — environment, reproducibility, policy, and workflow notes.
+- `docs/PHYSICAL_EVIDENCE_MATRIX.md` — material/residue/observable evidence and gaps.
+- `docs/ADVANCED_SENSING_STUDY.md` — v2 architecture and negative results.
+- `docs/REALISTIC_SIMULATION_REPORT.md` — joint-model v1→v2 benchmark.
+- `docs/FINAL_DIFFERENTIATION_MAP.md` — final prior-art separation.
 - `challenge/` — challenge intake metadata and rights-cleared material references.
 - `research/` — source and claim ledgers; no solution literature is added in Phase 0.
 - `proposal/` — form-aligned final proposal, claim audit and two-round red team.
@@ -65,4 +70,5 @@ generated submission artifact with:
 ```
 
 The pipeline reruns the frozen baseline, Phase 1 benchmark, robustness/coverage
-models, proposal audit, figures, curated package, repository verification and tests.
+models, realistic v2 study, proposal audit, figures, curated package, repository
+verification and tests.
