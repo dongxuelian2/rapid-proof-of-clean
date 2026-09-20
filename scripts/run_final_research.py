@@ -16,6 +16,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 import numpy as np
+from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -319,6 +320,11 @@ def _make_evidence(
     mask = morphology_mask(
         cfg["image_size"], scenario["morphology"], scenario["support"], seed + 91
     )
+    if float(scenario.get("psf_sigma", 0.0)) > 0:
+        mask = ndimage.gaussian_filter(mask.astype(float), float(scenario["psf_sigma"]))
+        maximum = float(mask.max())
+        if maximum > 0:
+            mask /= maximum
 
     for state, key in (("p", "primary"), ("c", "controlled")):
         profile = np.asarray(scenario.get(key, [0.0] * 6), dtype=float)
@@ -328,6 +334,14 @@ def _make_evidence(
     dsample = apply_diversity_response(
         dsample, mask, np.asarray(scenario.get("diversity", [0.0] * 12), dtype=float)
     )
+    if "illumination_gradient" in scenario:
+        magnitude = float(scenario["illumination_gradient"])
+        gradient = 1.0 + magnitude * np.linspace(-1.0, 1.0, cfg["image_size"])[None, :]
+        samples = {
+            key: np.clip(0.5 + gradient * (value - 0.5), 0.0, 1.0)
+            for key, value in samples.items()
+        }
+        dsample = np.clip(dsample * gradient, 1e-9, 1.0)
     if "registration" in scenario:
         shift = tuple(scenario["registration"])
         samples = {key: np.roll(value, shift, axis=(-2, -1)) for key, value in samples.items()}
@@ -379,7 +393,7 @@ def _make_evidence(
     diagnostics = {
         "reference_reasons": {key: item["reason"] for key, item in integrity.items()},
         "reference_valid": reference_valid,
-        "support_pixels": int(mask.sum()),
+        "support_pixels": int(np.count_nonzero(mask >= 0.5)),
     }
     return (
         evidence,

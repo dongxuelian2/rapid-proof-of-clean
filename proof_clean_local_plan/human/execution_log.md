@@ -21,3 +21,7 @@
 ## 2026-09-20 · final canonical verification
 
 完成的动作：运行 `scripts/run_submission_pipeline.py`，依次重建 Phase 1、最终研究、最终验证、v2、帧预算、proposal audit、图件和 submission package，并执行 repository verification、ruff 与 pytest；随后将 Phase 1 墙钟微基准标记为空值并规范化 unittest 耗时，避免固定种子结果因机器负载产生无意义 diff。输出路径：全部受管结果、图件及 `submission_package/`。验收结果：repository verification 检查 91 个必需文件并通过，ruff 通过，pytest 34 项通过；连续两次 Phase 1 生成物哈希一致。仍未证明的内容：这些是软件与合成证据，不能替代 coupon、硬件、现场、法律或正式提交验证。
+
+## 2026-09-20 · multiscale spatial certificate freeze
+
+完成的动作：冻结 `d9651de` 基线，构建独立 design/validation/held-out small-support benchmark，比较 global/tile/windows/components/local-density/edge 与 aggressive/balanced/conservative，重放原 400 例并运行 focused 400 例；冻结 balanced aggregation，不改 sensing evidence 或帧数。输出路径：`docs/SPATIAL_CERTIFICATE_STUDY.md`、`experiments/small_support_benchmark.*`、`experiments/spatial_adversarial_results.*`。验收结果：held-out `<5%` false-clean 66.96%→41.07%，clean PASS 76.04%→75.00%，false-FLAG 0%，原 replay PASS 136→93；结论 PARTIAL。canonical pipeline exit 0，repo verification 100 个文件、ruff、pytest 40 项全部通过。仍未证明的内容：真实 PSF/分辨率、材料响应、配准、clean texture 与 calibration；focused search 仍有 175/400 PASS。

@@ -52,6 +52,16 @@ Report per material/residue/level: PASS/FLAG/UNKNOWN counts by independent coupo
 false-clean proportion with interval, false-flag proportion on blanks, repeatability,
 coverage, time and invalid/reacquisition rate. Pixels are not independent trials.
 
+## Spatial-certificate additions
+
+- Prepare blinded supports at 0.1%, 0.25%, 0.5%, 1%, 2%, 3%, 4%, 5%, 7.5% and
+  10% of the registered FOV, with physical area and loading recorded.
+- Include compact blobs, streaks/thin lines, edge/corner deposits, multiple
+  droplets, dispersed particles and PSF-scale features on each feasible finish.
+- Measure PSF, pixel footprint and registration before interpreting spatial
+  thresholds. Report global and local-certificate outcomes separately; do not tune
+  the frozen balanced rule on blinded coupons.
+
 ## Stop / go criteria
 
 Stop the broad claim if any preregistered high-priority condition yields a

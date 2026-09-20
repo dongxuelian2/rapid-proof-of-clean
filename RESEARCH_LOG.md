@@ -210,3 +210,17 @@ finish the technical differentiation case.
 
 Freeze v2.2 and stop computational expansion. The next evidence gate is the
 preregistered physical coupon study; no simulation result is a physical claim.
+
+## 2026-09-20 — Multiscale spatial certificate
+
+- froze `d9651de` as the v2.2 baseline and replayed the original 400-case search;
+- separated observable-but-diluted from locally unobservable outcomes;
+- compared global, tile, multiscale-window, component, local-density, edge-aware,
+  aggressive, balanced and conservative release rules on disjoint splits;
+- froze balanced: held-out `<5%` false-clean 66.96%→41.07%, clean PASS
+  76.04%→75.00%, false-FLAG 0%, original replay PASS 136→93;
+- retained the negative boundary: focused adversarial PASS remains 175/400,
+  primarily below spatial limits; classification PARTIAL.
+
+Computational research is frozen. The next meaningful step is physical coupon
+validation of PSF/resolution, real material response, calibration and clean nuisance.

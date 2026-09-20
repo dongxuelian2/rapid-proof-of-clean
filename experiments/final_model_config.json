@@ -1,5 +1,5 @@
 {
-  "model_name": "v2.2_adaptive_reference_guarded_active_reflectance",
+  "model_name": "v2.3_adaptive_reference_guarded_multiscale_release",
   "evidence_type": "SYNTHETIC_ONLY",
   "physical_experiment_executed": false,
   "pass_certificate": ["d12", "c3"],
@@ -7,13 +7,16 @@
   "normal_clean_pass_frames": 36,
   "diagnostic_maximum_frames": 60,
   "minimum_visible_pixel_pass_fraction": 0.95,
+  "spatial_certificate": "balanced",
+  "spatial_certificate_file": "src/rapid_proof_clean/spatial_certificate.py",
+  "additional_measurement_frames_for_spatial_certificate": 0,
   "reference_anchor_required": true,
   "failure_default": "UNKNOWN",
   "frozen_seed_dates": [20260920, 20260921, 20260922],
   "limitations": [
     "No physical performance or detection limit has been measured.",
     "An observation-matched residue is indistinguishable from clean.",
-    "Stains below the spatial-support rule can still proxy-PASS.",
+    "Sub-1% and dispersed stains can still proxy-PASS the multiscale rule.",
     "Reference integrity depends on an independently certified dated anchor."
   ]
 }

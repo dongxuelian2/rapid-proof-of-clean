@@ -19,6 +19,16 @@ may not be changed after unblinding without declaring a new study.
 Version: 1.0, 2026-09-20. **Not yet executed or registered externally.** Amendments
 must be dated before data collection.
 
+## Final v2.3 spatial amendment (before any physical data collection)
+
+The sensing states and frame schedule remain frozen. FOV PASS additionally
+requires the balanced spatial certificate defined in
+`src/rapid_proof_clean/spatial_certificate.py`. Local certificate failure is
+UNKNOWN at the existing 36-frame decision and does not add acquisition. Physical
+reporting must stratify support at `<1%`, `1–2%`, `2–5%` and `>5%`, and must report
+blob, streak, edge/corner, dispersed, PSF-blurred and registration-related cases.
+Thresholds may not be recalibrated on the locked physical test coupons.
+
 ## Hypotheses
 
 H1: for at least one named material/residue pair, the locked v1 produces FLAG at
@@ -40,8 +50,9 @@ drive interpretation.
 
 - Code: commit recorded immediately before collection; config and reference hashes archived.
 - Primary endpoints: coupon-level false-clean, false-flag, UNKNOWN, and usable-coverage proportions.
-- Coupon aggregation: any valid FLAG → FLAG; PASS requires ≥95% visible pixels PASS
-  and no FLAG; otherwise UNKNOWN. This rule is prospective and separate from pixel inference.
+- Coupon aggregation: any valid FLAG → FLAG; PASS requires ≥95% visible pixels PASS,
+  no FLAG and the frozen balanced multiscale certificate; otherwise UNKNOWN. This
+  rule is prospective and separate from pixel inference.
 - Confidence intervals: Wilson 95% intervals by independent coupon; stratify all
   results by material/residue/level/day/operator.
 - No threshold tuning on the blinded test split. Calibration split 40%, locked test 60%.

@@ -13,6 +13,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
+matplotlib.rcParams["svg.hashsalt"] = "rapid-proof-of-clean"
+
 ROOT = Path(__file__).resolve().parents[1]
 FIGURES = ROOT / "figures"
 PROPOSAL_FIGURES = ROOT / "proposal" / "figures"
@@ -23,7 +25,12 @@ def save(fig: plt.Figure, stem: str) -> None:
     PROPOSAL_FIGURES.mkdir(parents=True, exist_ok=True)
     for suffix in ("png", "svg"):
         path = FIGURES / f"{stem}.{suffix}"
-        fig.savefig(path, dpi=220, bbox_inches="tight")
+        metadata = (
+            {"Date": "2026-09-20"}
+            if suffix == "svg"
+            else {"Software": "rapid-proof-of-clean deterministic figure pipeline"}
+        )
+        fig.savefig(path, dpi=220, bbox_inches="tight", metadata=metadata)
         if suffix == "svg":
             normalized = "\n".join(
                 line.rstrip() for line in path.read_text(encoding="utf-8").splitlines()
@@ -41,7 +48,7 @@ def workflow() -> None:
     boxes = [
         (0.3, 2.0, "3 references +\ndated anchor", "#dbeafe"),
         (2.5, 2.0, "adaptive 2→36\n(60 diagnostic)", "#e0e7ff"),
-        (4.8, 2.0, "bounded transfer\ninference", "#ede9fe"),
+        (4.8, 2.0, "bounded evidence +\nspatial certificate", "#ede9fe"),
         (7.2, 2.0, "PASS / FLAG /\nUNKNOWN", "#fef3c7"),
         (9.7, 2.0, "coverage log +\naction", "#dcfce7"),
     ]

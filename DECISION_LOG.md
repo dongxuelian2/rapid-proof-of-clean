@@ -57,6 +57,25 @@ Lightweight ADR-style record for project-level decisions.
 **Date:** 2026-09-20
 **Status:** Accepted.
 
+## D-012 — Retain balanced multiscale release; classify result PARTIAL
+
+**Decision:** Keep v2.2 sensing unchanged and freeze the balanced spatial
+certificate as v2.3 FOV release logic. Reject aggressive because validation clean
+PASS fell 14.58 percentage points. Retain balanced because validation clean PASS
+and false-FLAG matched baseline while `<5%` false-clean fell materially.
+
+**Evidence:** On the frozen held-out split, `<5%` false-clean changed
+66.96%→41.07%, clean PASS 76.04%→75.00%, false-FLAG stayed 0%, and UNKNOWN changed
+23.96%→25.00%. The original 400-case replay changed 136→93 PASS; a focused search
+still had 175/400 PASS.
+
+**Reason:** The rule repairs part of spatial dilution at zero frames, but sub-1%
+and dispersed anomalies remain. Further synthetic tuning is frozen; real PSF,
+pixel footprint, clean texture and registration must determine deployable limits.
+
+**Date:** 2026-09-20
+**Status:** Accepted as a partial computational improvement.
+
 ## D-007 — Retain evidence-backed v1 layers
 
 **Decision:** Retain reference consensus, bounded gain, and controlled geometry;

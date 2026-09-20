@@ -1,0 +1,53 @@
+{
+  "evidence_type": "SYNTHETIC_SPATIAL_AGGREGATION_AUDIT_ONLY",
+  "selected_certificate": "balanced",
+  "original_400_replay": {
+    "counts": {
+      "baseline_flag": 189,
+      "selected_flag": 189,
+      "baseline_pass": 136,
+      "selected_pass": 93,
+      "selected_unknown": 118,
+      "baseline_unknown": 75
+    },
+    "baseline_pass_classification": {
+      "A_OBSERVABLE_SPATIALLY_DILUTED": 136
+    },
+    "baseline_pass_by_support_bin": {
+      "<1%": 81,
+      "2-5%": 33,
+      "1-2%": 22
+    },
+    "baseline_pass_by_morphology": {
+      "patchy": 35,
+      "streak": 28,
+      "particles": 36,
+      "droplet": 37
+    },
+    "truly_observation_matched": "Excluded from this search by scope; the frozen separate impossibility control remains 100% PASS."
+  },
+  "focused_adversarial": {
+    "attempts": 400,
+    "baseline_passes": 233,
+    "selected_passes": 175,
+    "selected_pass_reasons": {
+      "BELOW_SPATIAL_LIMITS": 174,
+      "LOCALLY_UNOBSERVABLE": 1
+    },
+    "selected_pass_by_support_bin": {
+      "<1%": 151,
+      "2-5%": 9,
+      "1-2%": 15
+    },
+    "selected_pass_by_morphology": {
+      "compact_blob": 17,
+      "multiple_droplets": 24,
+      "dispersed_sparse": 37,
+      "corner_blob": 25,
+      "elongated_streak": 29,
+      "edge_blob": 22,
+      "registration_shifted": 16,
+      "psf_blurred": 5
+    }
+  }
+}

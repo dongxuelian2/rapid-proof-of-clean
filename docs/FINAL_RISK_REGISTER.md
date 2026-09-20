@@ -6,6 +6,7 @@ Probability estimates are engineering judgments, not measured frequencies.
 | --- | --- | --- | --- | --- | --- |
 | Optically invisible residue | HIGH | false-clean within retained channels | explicit scope, negative controls, orthogonal assay | HIGH; fundamental | YES |
 | Small-support residue below FOV tolerance/PSF | HIGH | false-clean despite strong local response | preregister size sweep; revise aggregation only on held-out physical data | HIGH | YES |
+| Spatial-threshold transfer | HIGH | synthetic local limits cause excess UNKNOWN or false release | calibrate on separate coupons; freeze before blinded test | HIGH until PSF/texture measured | YES |
 | All references share contamination/aging | MEDIUM | common-mode false-clean or loss of confidence | dated external anchor, independently prepared references, blanks, lifecycle study | HIGH; anchor can share error | YES |
 | Material/BRDF variability | HIGH | invalid threshold or large UNKNOWN | material-specific classes/references; refuse unsupported surfaces | HIGH | YES |
 | Controlled-state registration fails | HIGH | cancellation mitigation invalid | rigid fixture, fiducials, registration QA, disable PASS on failure | HIGH | YES |

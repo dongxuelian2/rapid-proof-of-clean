@@ -51,7 +51,7 @@ The retained observable classes are:
 | Spectral/angular/polarization shape change | centered 12-state log signature | FLAG or UNKNOWN |
 | Uniform modulation loss | bounded structured-light gain guard | FLAG outside the acquisition envelope |
 | Midband-only response | controlled three-frequency model check | UNKNOWN in the domain-shift audit |
-| Small-support response | may affect fewer than the 5% PASS tolerance | unresolved spatial-support risk |
+| Small-support response | challenged by frozen tiles/windows/components/edge limits | partially reduced; sub-1% and dispersed risk remains |
 | Response matched across all retained states | none | information-theoretically indistinguishable |
 
 ## Clean-PASS obligation
@@ -60,7 +60,8 @@ The final synthetic policy permits proxy PASS only when all of the following hol
 
 `dated anchor valid ∧ multi-reference set qualified ∧ coverage valid ∧`
 `all required frames valid ∧ diversity certificate PASS ∧ controlled f3 PASS ∧`
-`at least 95% of visible pixels PASS ∧ no pixel FLAG`.
+`at least 95% of visible pixels PASS ∧ no pixel FLAG ∧ balanced multiscale`
+`spatial certificate PASS`.
 
 Failure of a premise produces UNKNOWN, never PASS. This is a conditional proof
 obligation about the acquired optical proxy. It is not proof of sterility, species,

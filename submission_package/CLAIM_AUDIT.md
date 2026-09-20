@@ -21,6 +21,8 @@
 | v2.2 lowers domain-shift FOV false-clean | different synthetic response operator | final benchmark | 11.667% fixed vs 1.111% adaptive on constructed suite | expected field performance |
 | normal proxy PASS uses 36 frames | implemented sequential policy | `final_model_config.json`; tests | sample-frame certificate behavior | measured acquisition time |
 | matched-invisible remains 100% false-clean | information-theoretic control | final benchmark; observability note | fundamental retained-state limit | prevalence of invisible residue |
+| balanced spatial release reduces `<5%` false-clean | frozen synthetic held-out split | `small_support_benchmark.json` | 66.96%→41.07%; clean PASS 76.04%→75.00%; synthetic only | physical resolution or field detection limit |
+| original 400-case PASS falls 136→93 | deterministic replay | `spatial_adversarial_results.json` | aggregation-only comparison; zero added frames | expected field error rate |
 | common-mode live-reference drift becomes UNKNOWN when anchor differs | synthetic reference stress | final benchmark | tested construction only | independently clean anchor guarantee |
 | recent art discloses clean-reference optical measurement and iterative cleaning | scoped patent review | WO2025261682A1 | removes broad differentiation claim | legal claim interpretation or FTO |
 

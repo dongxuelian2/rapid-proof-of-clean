@@ -26,6 +26,9 @@ Do not submit until every required human item is checked.
 - [ ] Verify final synthetic metrics against
       `experiments/results/final_research_results.json` and historical metrics
       against the Phase 1/v2.1 artifacts.
+- [ ] Verify the spatial held-out and replay metrics against
+      `experiments/small_support_benchmark.json`; preserve the PARTIAL label and
+      the surviving sub-1%/dispersed limitation.
 - [ ] Verify timing numbers against `adaptive_coverage_time_model.csv`; do not call
       them measured or assume frame count maps proportionally to field time.
 - [ ] Keep optically invisible residue, common-mode reference corruption,

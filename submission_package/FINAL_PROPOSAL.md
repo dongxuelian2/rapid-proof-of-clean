@@ -48,7 +48,9 @@ Acquisition is sequential:
 Early stages may stop on a FLAG, but cannot issue proxy PASS. PASS requires the
 complete 36-frame certificate: qualified references, valid coverage and frames,
 PASS from all 12 diversity states and controlled three-frequency bounded inference,
-at least 95% visible-pixel PASS, and no pixel FLAG. Failed premises become UNKNOWN.
+at least 95% visible-pixel PASS, no pixel FLAG, and a balanced multiscale spatial
+certificate over tiles, sliding windows, connected components and the FOV edge.
+A local-certificate failure becomes UNKNOWN at 36 frames and adds no acquisition.
 
 Four-phase demodulation estimates fringe modulation. The structured model bounds
 `log(M_reference/M_sample) = a + x(b + q)`, where `x` scales with squared spatial
@@ -88,11 +90,13 @@ deliberate failures, v2.2 used mean 22.70, median 4, p95 60 and maximum 60 frame
 These rates are comparisons on a constructed distribution, not expected field
 performance.
 
-A 400-case random boundary search found 136 proxy-PASS cases. The strongest were
-mostly below the 5% visible-area tolerance, exposing spatial support/resolution as
-a major remaining weakness. An exact observation-matched residue proxy-PASSed
-100% under every policy. If clean and residue generate the same observation
-distribution, no optical classifier using those observations can distinguish them.
+A frozen small-support study used disjoint design, validation and held-out seeds.
+The balanced certificate reduced held-out `<5%` false-clean from 66.96% to 41.07%
+while clean PASS changed from 76.04% to 75.00%, false-FLAG stayed 0%, and UNKNOWN
+rose from 23.96% to 25.00%. It reduced the original 400-case replay from 136 to 93
+PASS with zero additional frames. This is a partial result: a focused search still
+produced 175/400 PASS, especially sub-1% and dispersed cases. An exact
+observation-matched residue remains information-theoretically indistinguishable.
 
 Reference stress was fail-safe in the tested constructions: one independent dirty
 reference was trimmed; common-mode drift and missing anchors produced UNKNOWN.
@@ -165,7 +169,9 @@ stainless steel, HDPE and glazed ceramic; named water/oil/protein/detergent/part
 surrogates; loading, thickness and stain-size levels; finish, day and operator;
 reference aging; and independent ground truth. Primary endpoints are coupon/FOV
 false-clean, false-FLAG, UNKNOWN, coverage and time with intervals. Exact/near-
-matched and small-support controls are mandatory.
+matched and small-support controls are mandatory. The spatial limits must be
+recalibrated against measured PSF, pixel footprint, registration and clean texture;
+the synthetic thresholds are not deployment specifications.
 
 Gate 2 is blinded multi-day replication with frozen code/config. Gate 3 is a
 cleanable prototype at two relevant sites, compared with each site's approved

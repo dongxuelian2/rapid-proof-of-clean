@@ -26,7 +26,7 @@ def morphology_mask(
     target = max(1, int(round(size * size * support_fraction)))
     if kind == "uniform":
         return np.ones((size, size), dtype=bool)
-    if kind == "droplet":
+    if kind in {"droplet", "compact_blob"}:
         radius = np.sqrt(target / np.pi)
         cx = rng.uniform(0.3, 0.7) * (size - 1)
         cy = rng.uniform(0.3, 0.7) * (size - 1)
@@ -42,7 +42,33 @@ def morphology_mask(
         mask = np.zeros((size, size), dtype=bool)
         mask[:, :width] = True
         return mask
-    if kind == "particles":
+    if kind in {"edge_blob", "corner_blob", "multiple_droplets"}:
+        if kind == "edge_blob":
+            centers = [(rng.uniform(0.25, 0.75) * (size - 1), 0.0)]
+        elif kind == "corner_blob":
+            centers = [(0.0, 0.0)]
+        else:
+            centers = [
+                (rng.uniform(0.15, 0.85) * (size - 1), rng.uniform(0.15, 0.85) * (size - 1))
+                for _ in range(4)
+            ]
+        distance = np.min(
+            np.stack([(xx - cx) ** 2 + (yy - cy) ** 2 for cx, cy in centers]), axis=0
+        )
+        mask = np.zeros((size, size), dtype=bool)
+        mask.flat[np.argpartition(distance.ravel(), target - 1)[:target]] = True
+        return mask
+    if kind in {"elongated_streak", "thin_line"}:
+        angle = rng.uniform(-0.35, 0.35)
+        center_x = rng.uniform(0.35, 0.65) * (size - 1)
+        center_y = rng.uniform(0.35, 0.65) * (size - 1)
+        along = (xx - center_x) * np.cos(angle) + (yy - center_y) * np.sin(angle)
+        across = -(xx - center_x) * np.sin(angle) + (yy - center_y) * np.cos(angle)
+        score = np.abs(across) + 0.02 * np.abs(along)
+        mask = np.zeros((size, size), dtype=bool)
+        mask.flat[np.argpartition(score.ravel(), target - 1)[:target]] = True
+        return mask
+    if kind in {"particles", "dispersed_sparse"}:
         mask = np.zeros((size, size), dtype=bool)
         indices = rng.choice(size * size, size=min(target, size * size), replace=False)
         mask.flat[indices] = True
@@ -81,11 +107,14 @@ def apply_structured_response(
     if frames.shape[-4] != len(frequency_log_attenuation):
         raise ValueError("frequency response length mismatch")
     output = frames.copy()
-    scale = np.exp(-frequency_log_attenuation)
-    for fi, factor in enumerate(scale):
+    weights = np.asarray(mask, dtype=float)
+    if weights.shape != frames.shape[-2:] or np.any((weights < 0) | (weights > 1)):
+        raise ValueError("mask must match the image and contain weights in [0, 1]")
+    for fi, attenuation in enumerate(frequency_log_attenuation):
         view = output[..., :, fi, :, :, :]
-        changed = 0.5 + gain * factor * (view - 0.5)
-        view[..., mask] = changed[..., mask]
+        local_scale = np.exp(-attenuation * weights)
+        local_gain = 1.0 + weights * (gain - 1.0)
+        view[...] = 0.5 + local_gain * local_scale * (view - 0.5)
     return np.clip(output, 0.0, 1.0)
 
 
@@ -104,10 +133,14 @@ def apply_diversity_response(
     if attenuation.shape != (12,):
         raise ValueError("feature response must contain 12 values")
     output = cube.copy()
+    weights = np.asarray(mask, dtype=float)
+    if weights.shape != cube.shape[-2:] or np.any((weights < 0) | (weights > 1)):
+        raise ValueError("mask must match the image and contain weights in [0, 1]")
     leading = output.shape[:-5]
     flat = output.reshape(*leading, 12, *output.shape[-2:])
-    changed = flat * (gain * np.exp(-attenuation))[..., None, None]
-    flat[..., mask] = changed[..., mask]
+    local_scale = np.exp(-attenuation[..., None, None] * weights)
+    local_gain = 1.0 + weights * (gain - 1.0)
+    flat[...] = flat * local_gain * local_scale
     return np.maximum(output, 1e-9)
 
 

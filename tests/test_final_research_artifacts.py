@@ -41,3 +41,26 @@ def test_common_mode_reference_and_missing_anchor_never_pass():
     ]
     assert records
     assert all(row["decision"] == "UNKNOWN" for row in records)
+
+
+def test_spatial_certificate_reduces_frozen_adversarial_passes_without_false_flags():
+    result = json.loads(
+        (ROOT / "experiments" / "small_support_benchmark.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert result["selected_certificate"] == "balanced"
+    assert result["conclusion"] == "PARTIAL"
+    counts = result["original_400_replay"]["counts"]
+    assert counts["baseline_pass"] == 136
+    assert counts["selected_pass"] < counts["baseline_pass"]
+    comparison = result["heldout_comparison"]
+    assert comparison["selected"]["clean_false_flag_rate"] == 0
+    assert (
+        comparison["selected"]["clean_pass_rate"]
+        >= comparison["baseline"]["clean_pass_rate"] - 0.05
+    )
+    assert result["operational"]["additional_measurement_frames"] == 0
+    domain = result["domain_shift_regression"]
+    assert domain["selected_contaminated"] == domain["baseline_contaminated"]
+    assert domain["selected_clean"] == domain["baseline_clean"]

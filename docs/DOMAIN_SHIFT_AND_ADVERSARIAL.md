@@ -41,6 +41,10 @@ with maximum structured attenuation 0.146 log units and diversity span 0.120 log
 units. The search therefore exposed spatial support—not another threshold—as the
 dominant remaining computational failure family.
 
+The follow-on frozen multiscale study changed the original replay from 136 to 93
+PASS without new frames. A focused held-out search still produced 175/400 PASS,
+so the result is classified PARTIAL. See `docs/SPATIAL_CERTIFICATE_STUDY.md`.
+
 The exact cases and parameters are frozen in
 `experiments/adversarial_regressions.json`. They are retained as negative results
 for future physical and higher-resolution tests.

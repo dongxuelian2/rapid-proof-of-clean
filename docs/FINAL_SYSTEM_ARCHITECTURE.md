@@ -1,4 +1,4 @@
-# Final v2.2 system architecture
+# Final v2.3 computational system architecture
 
 ## Decision objective
 
@@ -29,8 +29,11 @@ consensus or common-mode drift forces UNKNOWN.
 Structured frames use four-phase demodulation, bounded transfer inference and a
 gain guard. Diversity uses exposure-centered reference/sample log-signature shape.
 Any pixel FLAG makes the FOV FLAG. PASS requires named complete evidence, all
-global gates, no FLAG and at least 95% visible pixels PASS. Everything else is
-UNKNOWN. Missing measurements never shrink the PASS certificate.
+global gates, no FLAG, at least 95% visible pixels PASS and the balanced spatial
+certificate: bounded non-PASS density in 8×8 tiles and 4/8/16-pixel windows,
+bounded connected-component area/span, and a separate edge-band limit. A local
+violation is UNKNOWN at 36 frames. It neither changes pixel evidence nor adds an
+optical frame. Missing measurements never shrink the PASS certificate.
 
 ## Coverage and logging
 

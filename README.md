@@ -5,15 +5,16 @@ Research and submission workspace for the Rapid Proof of Clean innovation challe
 ## Current status
 
 ```text
-FINAL_V2_2_COMPUTATIONAL_CANDIDATE_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION
-TRL 2 — adaptive synthetic candidate complete; no physical experiment executed.
+FINAL_V2_3_COMPUTATIONAL_CANDIDATE_PARTIAL_SPATIAL_IMPROVEMENT
+TRL 2 — computational candidate frozen; no physical experiment executed.
 ```
 
 The active direction is reference-guarded multi-frequency active-reflectance
 screening with bounded inference, dated-anchor reference qualification, explicit
-abstention, coverage accounting and sequential acquisition. Candidate v2.2 uses a
-36-frame clean-PASS certificate and a 60-frame diagnostic tail. All performance
-evidence remains synthetic or assumption-driven.
+abstention, coverage accounting and sequential acquisition. Candidate v2.3 keeps
+v2.2 sensing and adds a balanced multiscale FOV-release certificate. It uses a
+36-frame clean-PASS point and a 60-frame diagnostic tail. All performance evidence
+remains synthetic or assumption-driven.
 
 ## Continuation entry
 

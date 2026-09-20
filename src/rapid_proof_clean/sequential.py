@@ -12,6 +12,8 @@ from dataclasses import dataclass
 import numpy as np
 from proof_clean_local_plan.src.core import FLAG, PASS, UNKNOWN
 
+from rapid_proof_clean.spatial_certificate import SpatialCertificate, spatial_outcome
+
 CONTINUE = "CONTINUE"
 
 
@@ -79,6 +81,7 @@ def run_policy(
     reference_valid: bool,
     coverage_valid: bool,
     failed_states: frozenset[str] = frozenset(),
+    spatial_certificate: SpatialCertificate | None = None,
 ) -> dict:
     """Run a policy and return its auditable state trace.
 
@@ -139,17 +142,39 @@ def run_policy(
         )
         if certificate_available:
             certificate_status = combine_evidence([evidence[key] for key in certificate])
-            certificate_outcome = fov_outcome(
+            baseline_certificate_outcome = fov_outcome(
                 certificate_status,
                 visible,
                 minimum_pass_fraction=policy.minimum_pass_fraction,
             )
+            if spatial_certificate is None:
+                certificate_outcome = baseline_certificate_outcome
+                spatial_audit = None
+            else:
+                spatial_audit = spatial_outcome(
+                    certificate_status,
+                    visible,
+                    spatial_certificate,
+                )
+                certificate_outcome = spatial_audit["decision"]
+                if (
+                    baseline_certificate_outcome == "PASS"
+                    and certificate_outcome == "UNKNOWN"
+                ):
+                    return {
+                        "decision": "UNKNOWN",
+                        "frames": stage.cumulative_frames,
+                        "reason": "spatial_certificate_failed",
+                        "trace": trace,
+                        "spatial_audit": spatial_audit,
+                    }
             if certificate_outcome == "PASS":
                 return {
                     "decision": "PASS",
                     "frames": stage.cumulative_frames,
                     "reason": "complete_clean_certificate",
                     "trace": trace,
+                    "spatial_audit": spatial_audit,
                 }
             if certificate_outcome == "FLAG":
                 return {
@@ -157,6 +182,7 @@ def run_policy(
                     "frames": stage.cumulative_frames,
                     "reason": "positive_contamination_evidence",
                     "trace": trace,
+                    "spatial_audit": spatial_audit,
                 }
     return {
         "decision": "UNKNOWN",
