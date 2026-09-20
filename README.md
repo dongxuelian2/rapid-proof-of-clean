@@ -2,18 +2,22 @@
 
 Research and submission workspace for the Rapid Proof of Clean innovation challenge.
 
-## Current phase
+## Current status
 
 ```text
-Phase 1 complete — frozen v0 plus a synthetic v1 research candidate
-Physical validation, novelty, field coverage, and submission readiness remain unestablished.
+SUBMISSION_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION
+TRL 2 — proposal and reproducible computational package complete; no physical experiment executed.
 ```
 
-The active technical direction is reference-calibrated multi-frequency active reflectance / structured-light screening with bounded inference and explicit abstention. Phase 1 adds multiple-reference confidence, a bounded-gain guard, and a controlled second measurement state. All performance evidence remains synthetic.
+The active direction is reference-guarded multi-frequency active-reflectance
+screening with bounded inference, explicit abstention, coverage accounting and a
+remeasurement path. All performance evidence remains synthetic or assumption-driven.
 
 ## Continuation entry
 
-Start the next session with [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md); it is the single entry for v0/v1 architecture, evidence boundaries, benchmark results, and open items.
+Start with [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md). The curated reviewer package
+is in [`submission_package/`](submission_package/), and the final classification
+and open human gates are in [`docs/FINAL_STATUS.md`](docs/FINAL_STATUS.md).
 
 ## Repository policy
 
@@ -43,16 +47,22 @@ The bootstrap script uses the installed `uv` tool when available, creates `.venv
 - `docs/` — environment, reproducibility, policy, and workflow notes.
 - `challenge/` — challenge intake metadata and rights-cleared material references.
 - `research/` — source and claim ledgers; no solution literature is added in Phase 0.
-- `proposal/` — later proposal drafts and review notes.
+- `proposal/` — form-aligned final proposal, claim audit and two-round red team.
+- `prior_art/` — literature/patent/product audit and structured matrix.
+- `figures/` — generated proposal figures in PNG and SVG.
+- `submission_package/` — curated files for human review and form submission.
 - `scripts/` — environment and repository checks.
 - `private_data/` — local-only material, ignored by Git.
 
 ## Scope guard
 
-No file in this repository supports claims of microbial detection, sterility, real-world LOD, zero real error, whole-room coverage, or novelty. Reproduce Phase 1 with:
+No file supports claims of microbial detection, sterility, real-world LOD, zero
+real error, whole-room coverage, novelty or freedom to operate. Reproduce every
+generated submission artifact with:
 
 ```powershell
-& .\.venv\Scripts\python.exe scripts\run_phase1.py
+& .\.venv\Scripts\python.exe scripts\run_submission_pipeline.py
 ```
 
-The command reruns frozen-baseline regression, the formal failure registry, the retained v1 benchmark, and the comparison report.
+The pipeline reruns the frozen baseline, Phase 1 benchmark, robustness/coverage
+models, proposal audit, figures, curated package, repository verification and tests.

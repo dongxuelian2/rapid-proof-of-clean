@@ -67,3 +67,17 @@ always-FLAG/UNKNOWN policy. Extra-channel contrast was injected, not measured.
 
 **Date:** 2026-09-20
 **Status:** Accepted as a synthetic research candidate; physical assumptions unvalidated.
+
+## D-008 — Submission package with explicit physical-evidence gate
+
+**Decision:** Classify the package as
+`SUBMISSION_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION`, retain TRL 2, and
+permit a proposal submission only with explicit synthetic/model labels and human
+completion of agreement, experience and AI/IP checks.
+
+**Reason:** The public challenge invites early TRL concepts, while the repository
+contains no physical residue data. A transparent theoretical proposal is supportable;
+a product-performance or proof-of-clean claim is not.
+
+**Date:** 2026-09-20
+**Status:** Accepted.

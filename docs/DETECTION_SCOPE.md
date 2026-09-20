@@ -30,4 +30,3 @@ proxy in screen-pixel².
 Material classes require separate references and acceptance envelopes. Claims may
 only expand after coupon studies establish response, interference, repeatability,
 false-clean rate, false-flag rate and coverage for a named surface/residue pair.
-

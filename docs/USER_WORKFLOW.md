@@ -18,4 +18,3 @@
 Suggested report language: “No modeled optical-transfer deviation was detected
 within the visible validated surface class” rather than “clean,” “safe,” or
 “sterile.” Training must explicitly cover scope, reference care and escalation.
-

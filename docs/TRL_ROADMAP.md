@@ -12,4 +12,3 @@ synthetic evidence). This is a self-assessment, not an external certification.
 
 Milestones are evidence gates, not dates. The first critical experiment is
 physical observability, not feature expansion.
-

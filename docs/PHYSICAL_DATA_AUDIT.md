@@ -17,4 +17,3 @@ The proposed first data collection is defined in `MINIMUM_COUPON_PROTOCOL.md` an
 data, checksums, preparation labels, calibration, environment, hardware/software
 versions and a clear license/privacy decision; large or restricted raw data should
 remain outside Git with a manifest.
-

@@ -17,6 +17,7 @@ The repository is designed to make later research work inspectable and repeatabl
 .\.venv\Scripts\python.exe scripts\verify_repo.py
 .\.venv\Scripts\ruff.exe check .
 .\.venv\Scripts\python.exe -m pytest
+.\.venv\Scripts\python.exe scripts\run_submission_pipeline.py
 ```
 
 ## Evidence discipline
@@ -25,3 +26,6 @@ The repository is designed to make later research work inspectable and repeatabl
 - Important claims are recorded in `research/claims_ledger.csv` and reference source IDs.
 - Challenge originals, confidential documents, account exports, and raw proprietary data stay outside Git unless redistribution rights are separately verified and documented.
 - Generated plots and computational outputs should record the source commit, environment, inputs, and command used.
+- The final pipeline regenerates `experiments/results`, figures and curated package
+  copies. Small runtime fields in Phase 1 JSON/CSV are machine-dependent; scientific
+  rates and fixed-seed outcomes are deterministic.

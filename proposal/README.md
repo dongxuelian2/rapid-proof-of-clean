@@ -1,5 +1,8 @@
 # Proposal workspace
 
-This directory is reserved for later proposal drafts, review notes, and compliance checks. It is intentionally empty of technical content during Phase 0.
+This directory contains the English form-aligned final proposal, a claim audit,
+two red-team rounds with a nonexpert read, and the archived v1 draft.
 
-Before a proposal claim is treated as material, link it to `research/claims_ledger.csv` and the supporting entries in `research/source_ledger.csv`.
+`FINAL_PROPOSAL.md` is the canonical draft. It retains human-only placeholders for
+participation type and experience and must not be submitted until the logged-in
+agreement and the human checklist have been completed.

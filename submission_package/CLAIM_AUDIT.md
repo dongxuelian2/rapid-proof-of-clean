@@ -1,0 +1,30 @@
+# Final proposal claim audit
+
+| Proposal statement | Evidence type | Source / artifact | Allowed wording | Prohibited inference |
+| --- | --- | --- | --- | --- |
+| Structured light can reveal some contamination/defect responses | published external evidence | Huang 2019/2020 | establishes mechanism plausibility | validates this device or all residues |
+| Deflectometry is fast, non-contact and full-field | published review/product evidence | Burke 2023; Micro-Epsilon | adjacent technical foundation | low-cost cleaning performance |
+| v0 false-cleaned four constructed cases | synthetic run | `phase1_results.json` | true for fixed toy-model scenes | real false-clean rate |
+| v1 flags three of four constructed cases | synthetic run | `failure_mode_registry.csv` | model-conditional improvement | 75% real detection sensitivity |
+| optically invisible construction still passes | synthetic impossibility control | Phase 1 results | retained modality limitation | all real residues are invisible |
+| standard synthetic proxy-positive PASS is 0% | synthetic run | Phase 1 results | fixed benchmark only | zero real error or proof of safety |
+| standard synthetic UNKNOWN is 17.54% | synthetic run | Phase 1 results | fixed benchmark only | expected field availability |
+| 12 m² conservative scenario is 21.3 min | assumption model | `coverage_time_model.csv` | planning scenario | measured hardware speed |
+| 25 m² conservative scenario is 36.7 min | assumption model | coverage model | transparent limit | whole-room under 30 minutes |
+| field BOM $2,100–$9,200 | planning estimate | `HARDWARE_BOM.md` | indicative, unquoted range | purchase price or field readiness |
+| routine imaging has no reagent consumable | design fact | architecture/BOM | true for imaging step | zero maintenance/consumable cost |
+| PASS requires two states and validity | implemented code | `phase1.py` | software behavior | scientifically valid physical threshold |
+| UNKNOWN routes to reacquire/escalate | workflow design | architecture/workflow | proposed safety behavior | validated usability |
+| current maturity is TRL 2 | reasoned self-assessment | NASA terminology; evidence ledger | concept-stage estimate | external certification |
+| no exact full workflow match found | scoped search result | prior-art matrix | “not confirmed in this search” | novelty or freedom to operate |
+
+## Language check
+
+- “clean,” when used as an outcome, was replaced by “proxy PASS” or by a statement
+  about the accepted optical-transfer envelope.
+- No species, strain, microbial-load, sterility, regulatory, real LOD,
+  sensitivity/specificity, or whole-room performance claim is made.
+- Every reported number is paired with `synthetic`, `assumption-driven`, or
+  `unquoted estimate` as appropriate.
+- Participant experience, participation category, eligibility and agreement
+  acceptance remain human-only fields.
