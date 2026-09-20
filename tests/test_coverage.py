@@ -2,7 +2,11 @@ from __future__ import annotations
 
 import pytest
 
-from rapid_proof_clean.coverage import CoverageInputs, estimate_coverage
+from rapid_proof_clean.coverage import (
+    CoverageInputs,
+    estimate_coverage,
+    estimate_coverage_for_frame_budget,
+)
 
 
 def test_coverage_breakdown_is_auditable() -> None:
@@ -41,3 +45,22 @@ def test_invalid_fraction_rejected(field: str, value: float) -> None:
         estimate_coverage(
             CoverageInputs(name="bad", target_area_m2=1, fov_width_m=1, fov_height_m=1, **values)
         )
+
+
+def test_sequential_frame_budget_accepts_percentile_value() -> None:
+    inputs = CoverageInputs(
+        name="adaptive",
+        target_area_m2=1,
+        fov_width_m=0.5,
+        fov_height_m=0.5,
+        area_overlap_fraction=0,
+        inaccessible_fraction=0,
+        frame_period_s=0.01,
+        processing_per_view_s=0,
+        reposition_per_view_s=0,
+        setup_and_reference_s=0,
+    )
+    result = estimate_coverage_for_frame_budget(inputs, 17.5, budget_label="mean")
+    assert result["views"] == 4
+    assert result["frames_per_view"] == 17.5
+    assert result["total_s"] == pytest.approx(0.7)

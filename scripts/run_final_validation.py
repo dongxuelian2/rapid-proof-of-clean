@@ -16,7 +16,11 @@ sys.path.insert(0, str(ROOT))
 from proof_clean_local_plan.src.core import FLAG, PASS, UNKNOWN
 from proof_clean_local_plan.src.simulation import make_scene
 
-from rapid_proof_clean.coverage import CoverageInputs, estimate_coverage
+from rapid_proof_clean.coverage import (
+    CoverageInputs,
+    estimate_coverage,
+    estimate_coverage_for_frame_budget,
+)
 from rapid_proof_clean.phase1 import V1Config, combine_measurement_states, infer_reference_ensemble
 from rapid_proof_clean.robustness import Nuisance, perturb_frames
 
@@ -174,6 +178,71 @@ def coverage_scenarios() -> list[dict]:
     return results
 
 
+def adaptive_coverage_scenarios() -> list[dict]:
+    benchmark = read_json(RESULTS / "final_research_results.json")
+    records = [
+        row
+        for row in benchmark["records"]
+        if row["policy"] == "adaptive_standard"
+        and row["group"] in ("clean", "contaminated", "nuisance")
+        and row["reference_valid"]
+    ]
+    frames = np.asarray([row["frames"] for row in records], dtype=float)
+    budgets = {
+        "expected_valid_synthetic_mix": float(np.mean(frames)),
+        "p95_valid_synthetic_mix": float(np.quantile(frames, 0.95)),
+        "worst_case_diagnostic": 60.0,
+        "clean_pass_certificate": 36.0,
+    }
+    profiles = {
+        "optimistic": dict(
+            fov_width_m=0.50,
+            fov_height_m=0.40,
+            area_overlap_fraction=0.15,
+            frame_period_s=1 / 60,
+            processing_per_view_s=0.4,
+            reposition_per_view_s=1.0,
+            setup_and_reference_s=90,
+        ),
+        "conservative": dict(
+            fov_width_m=0.30,
+            fov_height_m=0.25,
+            area_overlap_fraction=0.25,
+            frame_period_s=1 / 30,
+            processing_per_view_s=1.0,
+            reposition_per_view_s=3.0,
+            setup_and_reference_s=120,
+        ),
+        "stress": dict(
+            fov_width_m=0.20,
+            fov_height_m=0.15,
+            area_overlap_fraction=0.35,
+            frame_period_s=1 / 20,
+            processing_per_view_s=2.0,
+            reposition_per_view_s=6.0,
+            setup_and_reference_s=180,
+        ),
+    }
+    targets = [("1m2", 1.0, 0.05), ("5m2", 5.0, 0.20), ("12m2", 12.0, 0.25), ("25m2", 25.0, 0.35)]
+    results = []
+    for profile, assumptions in profiles.items():
+        for target, area, inaccessible in targets:
+            inputs = CoverageInputs(
+                name=f"{profile}:{target}",
+                target_area_m2=area,
+                inaccessible_fraction=inaccessible,
+                **assumptions,
+            )
+            for label, frame_budget in budgets.items():
+                item = estimate_coverage_for_frame_budget(
+                    inputs, frame_budget, budget_label=label
+                )
+                item["profile"] = profile
+                item["target"] = target
+                results.append(item)
+    return results
+
+
 def write_csv(path: Path, rows: list[dict]) -> None:
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
@@ -186,11 +255,19 @@ def main() -> int:
     experiment_cfg = read_json(ROOT / "experiments" / "v1_config.json")
     robustness = run_robustness(cfg, experiment_cfg)
     coverage = coverage_scenarios()
+    adaptive_coverage = adaptive_coverage_scenarios()
     RESULTS.mkdir(parents=True, exist_ok=True)
     write_csv(RESULTS / "robustness_envelope.csv", robustness)
     write_csv(
         RESULTS / "coverage_time_model.csv",
         [{key: value for key, value in item.items() if key != "inputs"} for item in coverage],
+    )
+    write_csv(
+        RESULTS / "adaptive_coverage_time_model.csv",
+        [
+            {key: value for key, value in item.items() if key != "inputs"}
+            for item in adaptive_coverage
+        ],
     )
     (RESULTS / "final_validation_results.json").write_text(
         json.dumps(
@@ -199,13 +276,17 @@ def main() -> int:
                 "physical_experiment_executed": False,
                 "robustness": robustness,
                 "coverage": coverage,
+                "adaptive_coverage": adaptive_coverage,
             },
             indent=2,
         )
         + "\n",
         encoding="utf-8",
     )
-    print(f"Wrote {len(robustness)} robustness rows and {len(coverage)} coverage scenarios")
+    print(
+        f"Wrote {len(robustness)} robustness rows, {len(coverage)} fixed coverage "
+        f"scenarios and {len(adaptive_coverage)} adaptive scenarios"
+    )
     return 0
 
 
