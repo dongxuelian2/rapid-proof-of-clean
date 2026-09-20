@@ -5,22 +5,22 @@ Research and submission workspace for the Rapid Proof of Clean innovation challe
 ## Current phase
 
 ```text
-Phase 0 complete — infrastructure plus an existing computational proof-of-concept handoff
-No new technical direction is selected in this consolidation pass.
+Phase 1 complete — frozen v0 plus a synthetic v1 research candidate
+Physical validation, novelty, field coverage, and submission readiness remain unestablished.
 ```
 
-This repository is intentionally limited to project infrastructure, challenge intake, research bookkeeping, reproducibility, and later submission preparation. It does not choose or endorse a technical approach.
+The active technical direction is reference-calibrated multi-frequency active reflectance / structured-light screening with bounded inference and explicit abstention. Phase 1 adds multiple-reference confidence, a bounded-gain guard, and a controlled second measurement state. All performance evidence remains synthetic.
 
 ## Continuation entry
 
-The existing computational work is preserved as a self-contained subproject. Start the next session with [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md); it is the single handoff entry for the imported implementation, evidence, baseline results, and open items.
+Start the next session with [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md); it is the single entry for v0/v1 architecture, evidence boundaries, benchmark results, and open items.
 
 ## Repository policy
 
 - The GitHub repository is private by policy and is initialized at `https://github.com/dongxuelian2/rapid-proof-of-clean`.
 - Original challenge materials with unclear redistribution, copyright, confidentiality, or download terms stay outside version control.
 - Secrets, credentials, cookies, tokens, and API keys never belong in this repository.
-- No technical route has been selected during Phase 0.
+- The selected research route is active optical screening; it is not a validated product or hygiene standard.
 - Important research claims must later be traceable through `research/claims_ledger.csv` to entries in `research/source_ledger.csv`.
 - No open-source license is added before an IP review.
 
@@ -49,4 +49,10 @@ The bootstrap script uses the installed `uv` tool when available, creates `.venv
 
 ## Scope guard
 
-This consolidation pass does not add a technical direction or solve any failure mode. Continue only from `PROJECT_HANDOFF.md` after reviewing the existing evidence and its limits.
+No file in this repository supports claims of microbial detection, sterility, real-world LOD, zero real error, whole-room coverage, or novelty. Reproduce Phase 1 with:
+
+```powershell
+& .\.venv\Scripts\python.exe scripts\run_phase1.py
+```
+
+The command reruns frozen-baseline regression, the formal failure registry, the retained v1 benchmark, and the comparison report.

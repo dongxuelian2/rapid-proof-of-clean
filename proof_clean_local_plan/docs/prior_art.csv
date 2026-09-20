@@ -1,7 +1,16 @@
-item,source_id,known_before_this_project,candidate_difference,status
-screen_and_camera_structured_light,S3,yes,not_claimed_as_new,prior_art
-four_phase_modulation,S3,yes,not_claimed_as_new,prior_art
-optical_soiling_mapping,S4,yes,not_claimed_as_new,prior_art
-before_after_cleaning_evaluation,S5,yes,not_claimed_as_new,prior_art
-model_conditional_upper_bounds,S3,not_established_by_this_search,contaminant_proxy_feasible_set_and_abstention,unverified_novelty
-measurement_budget_and_coverage_audit,S1,not_established_by_this_search,minimum_measurements_subject_to_observability,unverified_novelty
+item,source_id,precedent_confirmed,candidate_difference,status,claim_implication
+screen_camera_structured_light,S3,yes,none,PRIOR_ART,"Do not claim structured-light contamination imaging as new"
+four_phase_or_phase_shifted_modulation,S3;S11,yes,none,PRIOR_ART,"Do not claim phase shifting or multiple spatial frequencies as new"
+perpendicular_fringe_directions,S6,yes,none,PRIOR_ART,"Two-direction fusion is explicit precedent"
+contamination_and_defect_modulation_map,S3;S6;S7,yes,none,PRIOR_ART,"Do not claim whole-field modulation anomaly mapping as new"
+direct_binary_structured_light_inspection,S7,yes,none,PRIOR_ART,"Low-computation structured-light inspection is not unique"
+deflectometry_for_reflective_surface_inspection,S8,yes,none,PRIOR_ART,"Reflective-surface fringe inspection is a mature field"
+polarization_soiling_measurement,S4,yes,none,PRIOR_ART,"Polarization and large-area mirror soiling are not new by themselves"
+multi_angle_multi_wavelength_cleaning_qc,S10,yes,none,PRIOR_ART,"Multiple illumination angles and visible/IR states are established choices"
+reference_based_reflectance_contamination,S5,yes,none,PRIOR_ART,"Clean reference and relative reflectance/color difference are not new"
+before_after_cleaning_recovery,S5;S10,yes,none,PRIOR_ART,"Before/after wash comparison and recovery scoring are not new"
+hospital_optical_cleanliness_imaging,S9,yes,none,PRIOR_ART,"Optical cleanliness imaging exists; hyperspectral route is challenge-restricted below TRL6"
+bounded_feasible_proxy_interval,S3;S6;S8,no_exact_match_confirmed,"model-conditional interval plus explicit abstention",UNVERIFIED_DIFFERENCE,"May be a workflow distinction; never call it novel without deeper search"
+majority_reference_confidence,S5,no_exact_match_confirmed,"self-consistency score and corrupt-reference abstention",UNVERIFIED_DIFFERENCE,"Could differentiate workflow but majority-clean assumption is strong"
+adversarial_false_clean_registry,S3;S8,no_exact_match_confirmed,"failure registry centered on false clean plus coverage",UNVERIFIED_DIFFERENCE,"Research/assurance workflow distinction only"
+controlled_dual_state_plus_bounds,S3;S10;S11,no_exact_match_confirmed,"registered high-SNR repeat used to break modeled cancellation",UNVERIFIED_DIFFERENCE,"Combination may be differentiating; components have precedent"

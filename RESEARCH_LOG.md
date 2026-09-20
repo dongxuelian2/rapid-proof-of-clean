@@ -94,3 +94,46 @@ Complete the requested private GitHub initialization after local validation.
 ### Next
 
 Phase 1 — Challenge intake, rules/IP audit, and broad technology landscape scouting.
+
+## 2026-09-20 — Phase 1 de-risking
+
+### Goal
+
+Advance the active-reflectance synthetic baseline into an audited v1 research
+candidate without overstating physical evidence.
+
+### Actions
+
+- Froze clean `main` commit `933c82d5...` as annotated tag `v0-baseline` and
+  verified the reference metrics, 12 stress classes, 8 original tests, 2 root
+  tests, ruff, and integrity checker before core changes.
+- Audited the official public challenge page and recorded logged-in agreement,
+  geographic, payment, tax, confidentiality, and detailed license items as `TO VERIFY`.
+- Expanded the source and claim ledgers and completed a focused prior-art screen.
+- Built a fixed-seed failure registry centered on false clean, abstention, usable
+  coverage, nuisance seed, and runtime.
+- Tested gain guard, reference consensus, controlled geometry, and a hypothetical
+  secondary optical state; rejected the unvalidated optical-state result.
+- Implemented retained v1 and a single-command reproducibility pipeline.
+- Added real-world parameter mapping and a not-performed physical pilot plan.
+
+### Findings
+
+- v0 false-clean was 100% for each prioritized failure construction.
+- v1 reduced dirty-reference, uniform-absorber, and cancellation false-clean to
+  0% in the fixed synthetic benchmark; invisible residue stayed at 100%.
+- Standard synthetic regression stayed at 0% proxy false-clean and 100% q=0 PASS.
+- Major optical components have clear precedent; only a combined assurance
+  workflow remains a possible, unverified distinction.
+
+### Decisions
+
+- Keep invisible residue as a fundamental retained-modality limitation.
+- Retain reference consensus, bounded gain, and controlled second-state logic.
+- Do not retain the hypothetical extra-channel response without physical data.
+- Keep all claims explicitly synthetic/model-conditional until physical validation.
+
+### Next
+
+Human agreement review, then the pre-registered coupon pilot and focused
+multi-reference/abstention patent-product search. Do not write a final proposal yet.

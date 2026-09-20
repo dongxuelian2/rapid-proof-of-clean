@@ -1,0 +1,19 @@
+Environment recorded; no GPU, account, paid API or network used.
+test_amplitude_error_bound (test_core.CoreTests.test_amplitude_error_bound) ... ok
+test_demodulation_exact (test_core.CoreTests.test_demodulation_exact) ... ok
+test_gaussian_kernel_frequency_response (test_core.CoreTests.test_gaussian_kernel_frequency_response) ... ok
+test_hidden_is_unknown (test_core.CoreTests.test_hidden_is_unknown) ... ok
+test_interval_contains_true_proxy (test_core.CoreTests.test_interval_contains_true_proxy) ... ok
+test_more_frequencies_cannot_expand_exact_feasible_set (test_core.CoreTests.test_more_frequencies_cannot_expand_exact_feasible_set) ... ok
+test_no_nan (test_core.CoreTests.test_no_nan) ... ok
+test_slope_interval (test_core.CoreTests.test_slope_interval) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.132s
+
+OK
+
+smoke: 12 synthetic scenes -> outputs/smoke.csv
+benchmark: 72 synthetic scenes -> outputs/benchmark.csv
+stress: 48 synthetic scenes -> outputs/stress.csv
+Report -> outputs/report.md; all claims remain synthetic/model-conditional.

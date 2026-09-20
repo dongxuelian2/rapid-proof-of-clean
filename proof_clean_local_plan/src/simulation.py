@@ -8,7 +8,24 @@ STRESSES=['low_signal','occluded','clipped','noise_bound_violated',
           'optically_invisible_residue','scratch_like_response','phase_motion',
           'frequency_dependent_gain','negative_blur_cancellation']
 
-def make_scene(cfg:dict,rng:np.random.Generator,kind:str):
+def make_scene(
+    cfg: dict,
+    rng: np.random.Generator,
+    kind: str,
+    *,
+    measurement_state: str = 'primary',
+):
+    """Create a synthetic scene.
+
+    ``primary`` is the frozen v0 generator.  The other states are explicit
+    Phase-1 candidate measurements; they never alter reference-run artifacts.
+    ``controlled_geometry`` repeats the observation after restoring geometry
+    to the declared clean-variation bound.  ``secondary_optical`` is a
+    deliberately hypothetical extra optical degree of freedom used only to
+    show what information would be required for an otherwise invisible case.
+    """
+    if measurement_state not in ('primary', 'controlled_geometry', 'secondary_optical'):
+        raise ValueError('Unknown measurement state: '+measurement_state)
     h=w=cfg['image_size']; shape=(h,w)
     q=np.zeros((2,h,w))
     th=cfg['proxy_threshold_pixel2']
@@ -25,7 +42,12 @@ def make_scene(cfg:dict,rng:np.random.Generator,kind:str):
     # Shared per-scene variations: pixels must NOT be treated as independent trials.
     b=rng.uniform(-bmax,bmax,size=(2,1,1))*np.ones((2,h,w))
     if kind=='defocus_bound_violated': b[:]=0.8
-    if kind=='negative_blur_cancellation': b[:]=-0.6
+    if kind=='negative_blur_cancellation':
+        b[:]=-0.6 if measurement_state=='primary' else 0.0
+    if kind=='optically_invisible_residue' and measurement_state=='secondary_optical':
+        # This is not a claim that a real wavelength/polarization state has
+        # this response.  It is a sensitivity experiment for added contrast.
+        q[:]=0.8
     qref=np.zeros_like(q)
     if kind=='dirty_reference': qref=q.copy(); b[:]=0
     v=cfg['reference_blur_variance_pixel2']
@@ -59,7 +81,7 @@ def make_scene(cfg:dict,rng:np.random.Generator,kind:str):
     visible=np.ones(shape,dtype=bool)
     if kind=='occluded': visible[:,:w//2]=False
     contaminated_by_construction=kind in ('uniform_absorber','optically_invisible_residue','dirty_reference')
-    meta=dict(kind=kind,evidence_type='SYNTHETIC',
+    meta=dict(kind=kind,evidence_type='SYNTHETIC', measurement_state=measurement_state,
               physical_label_simulated_only=contaminated_by_construction,
               proxy_definition='max directional excess blur variance >= threshold',
               material_identity='NONE; abstract response model',

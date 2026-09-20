@@ -1,0 +1,20 @@
+{
+  "evidence_type": "SYNTHETIC_ONLY",
+  "reference_count": 3,
+  "minimum_reference_consensus": 2,
+  "reference_consistency_bound_pixel2": 0.25,
+  "gain_log_ratio_bound": 0.36,
+  "controlled_geometry_clean_variation_bound_pixel2": 0.01,
+  "controlled_geometry_additive_noise_bound": 0.0002,
+  "controlled_geometry_quantization_levels": 4096,
+  "retained_measurement_states": ["primary", "controlled_geometry"],
+  "candidate_only_measurement_state": "secondary_optical",
+  "fixed_seed": 20260920,
+  "failure_scenes_per_class": 8,
+  "limitations": [
+    "Reference consensus assumes a majority-clean mutually consistent reference set.",
+    "Gain guard assumes calibrated acquisition-gain drift within the configured bound.",
+    "Controlled geometry is simulated and has not been demonstrated on hardware.",
+    "No retained channel observes the optically invisible residue construction."
+  ]
+}

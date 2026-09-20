@@ -1,6 +1,6 @@
 # 参考资料与证据边界
 
-检索核对日期：2026-09-19。以下是阅读入口，不替代参与者阅读原文。没有获得原始实验数据；本包也没有复制论文图片或作者数据。
+初始检索日期：2026-09-19；Phase 1 公开来源复核日期：2026-09-20。以下是阅读入口，不替代参与者阅读原文。没有获得原始实验数据；本包也没有复制论文图片或作者数据。扩展来源 S6–S11 的完整元数据与核对级别见仓库根目录 `research/source_ledger.csv`，综合结论见 `docs/PRIOR_ART_AUDIT.md`。
 
 ## S1 · Novel Technologies for Rapid Proof of Clean in Professional Environments
 
@@ -31,3 +31,14 @@ https://arxiv.org/abs/2501.01643
 https://patents.google.com/patent/WO2008029946A1/en
 
 提醒参与者污染评估、指纹及清洁前后恢复评估有长期已有技术。 可支持：存在相关已公开技术内容。不能据此断言：该专利的当前法律状态、自由实施结论或本方案的专利性。
+
+## Phase 1 扩展来源
+
+- **S6**：Huang et al. (2020), improved SMAT models；已有双正交条纹融合和污染/缺陷形貌建模。
+- **S7**：Huang (2020), direct structured-light inspection；已有二值结构光污染/缺陷直接成像。
+- **S8**：Burke et al. (2023), deflectometry review；反射表面条纹检测是成熟领域，且污染/缺陷可混淆。
+- **S9**：Mäkilä et al. (2019), hospital optical contamination imaging；专业环境光学清洁成像已有实证先例，但其高光谱路线受本赛事 TRL 条件限制。
+- **S10**：Mari et al. (2025), automotive cleaning QC；不同角度及可见/红外照明的清洁前后视觉质检已有先例。
+- **S11**：Li et al. (2003), two-frequency phase measurement；多频相移与噪声权衡并非新概念。
+
+未在本轮检索到完整组合不等于该组合不存在；novelty 和 freedom-to-operate 均保持 `UNVERIFIED`。

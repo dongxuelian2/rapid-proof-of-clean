@@ -1,0 +1,385 @@
+{
+  "evidence_type": "SYNTHETIC_ONLY",
+  "physical_validation_performed": false,
+  "baseline_regression": {
+    "frozen_head": "933c82d51b9de0b5ee8609d3bcf05772348cd8a5",
+    "tag": "v0-baseline",
+    "metrics_equal": true,
+    "stress_equal": true,
+    "original_tests_equal": true,
+    "original_tests": {
+      "tests_run": 8,
+      "failures": 0,
+      "errors": 0,
+      "passed": true
+    }
+  },
+  "v0_bounded_interval": {
+    "method": "bounded_interval",
+    "proxy_positive_called_pass": 0,
+    "proxy_positive_pixels": 39936,
+    "false_pass_fraction": 0.0,
+    "zero_proxy_pass_fraction": 1.0,
+    "unknown_fraction": 0.18433973524305555,
+    "proxy_positive_flag_fraction": 0.6923076923076923,
+    "worst_scene_false_pass_fraction": 0.0,
+    "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+  },
+  "failure_aggregate": [
+    {
+      "method": "v0_single_reference",
+      "failure_mode": "dirty_reference",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0011693624996951257
+    },
+    {
+      "method": "v0_single_reference",
+      "failure_mode": "uniform_absorber",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0011445249997450446
+    },
+    {
+      "method": "v0_single_reference",
+      "failure_mode": "optically_invisible_residue",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0011569124999368796
+    },
+    {
+      "method": "v0_single_reference",
+      "failure_mode": "negative_blur_cancellation",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0011381125000298198
+    },
+    {
+      "method": "v0_single_reference",
+      "failure_mode": "ALL_FAILURES",
+      "scene_count": 32,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0011522281248517174
+    },
+    {
+      "method": "E1_gain_guard",
+      "failure_mode": "dirty_reference",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0021728124997935083
+    },
+    {
+      "method": "E1_gain_guard",
+      "failure_mode": "uniform_absorber",
+      "scene_count": 8,
+      "false_clean_rate": 0.375,
+      "flag_rate": 0.625,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0013372124997204082
+    },
+    {
+      "method": "E1_gain_guard",
+      "failure_mode": "optically_invisible_residue",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0013451750003241614
+    },
+    {
+      "method": "E1_gain_guard",
+      "failure_mode": "negative_blur_cancellation",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0013472000000547268
+    },
+    {
+      "method": "E1_gain_guard",
+      "failure_mode": "ALL_FAILURES",
+      "scene_count": 32,
+      "false_clean_rate": 0.84375,
+      "flag_rate": 0.15625,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0015505999999732012
+    },
+    {
+      "method": "E2_reference_consensus",
+      "failure_mode": "dirty_reference",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 1.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0031367999999929452
+    },
+    {
+      "method": "E2_reference_consensus",
+      "failure_mode": "uniform_absorber",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0042434125000454515
+    },
+    {
+      "method": "E2_reference_consensus",
+      "failure_mode": "optically_invisible_residue",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.004288299999643641
+    },
+    {
+      "method": "E2_reference_consensus",
+      "failure_mode": "negative_blur_cancellation",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0041900375001659995
+    },
+    {
+      "method": "E2_reference_consensus",
+      "failure_mode": "ALL_FAILURES",
+      "scene_count": 32,
+      "false_clean_rate": 0.75,
+      "flag_rate": 0.25,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.003964637499962009
+    },
+    {
+      "method": "E3_controlled_geometry",
+      "failure_mode": "dirty_reference",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.001863850000063394
+    },
+    {
+      "method": "E3_controlled_geometry",
+      "failure_mode": "uniform_absorber",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0018417999999655876
+    },
+    {
+      "method": "E3_controlled_geometry",
+      "failure_mode": "optically_invisible_residue",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0019637125001281674
+    },
+    {
+      "method": "E3_controlled_geometry",
+      "failure_mode": "negative_blur_cancellation",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 1.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0018460250000771339
+    },
+    {
+      "method": "E3_controlled_geometry",
+      "failure_mode": "ALL_FAILURES",
+      "scene_count": 32,
+      "false_clean_rate": 0.75,
+      "flag_rate": 0.25,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.0018788468750585707
+    },
+    {
+      "method": "E4_secondary_optical_hypothesis",
+      "failure_mode": "dirty_reference",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.002025075000119614
+    },
+    {
+      "method": "E4_secondary_optical_hypothesis",
+      "failure_mode": "uniform_absorber",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.001849037500051054
+    },
+    {
+      "method": "E4_secondary_optical_hypothesis",
+      "failure_mode": "optically_invisible_residue",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 0.994140625,
+      "unknown_rate": 0.005859375,
+      "usable_coverage": 0.994140625,
+      "mean_runtime_seconds": 0.0018891374998020183
+    },
+    {
+      "method": "E4_secondary_optical_hypothesis",
+      "failure_mode": "negative_blur_cancellation",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 1.0,
+      "usable_coverage": 0.0,
+      "mean_runtime_seconds": 0.0018519875000038155
+    },
+    {
+      "method": "E4_secondary_optical_hypothesis",
+      "failure_mode": "ALL_FAILURES",
+      "scene_count": 32,
+      "false_clean_rate": 0.5,
+      "flag_rate": 0.24853515625,
+      "unknown_rate": 0.25146484375,
+      "usable_coverage": 0.74853515625,
+      "mean_runtime_seconds": 0.0019038093749941254
+    },
+    {
+      "method": "v1_retained",
+      "failure_mode": "dirty_reference",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 1.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.006692325000585697
+    },
+    {
+      "method": "v1_retained",
+      "failure_mode": "uniform_absorber",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 1.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.008853187499880733
+    },
+    {
+      "method": "v1_retained",
+      "failure_mode": "optically_invisible_residue",
+      "scene_count": 8,
+      "false_clean_rate": 1.0,
+      "flag_rate": 0.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.008809349999864935
+    },
+    {
+      "method": "v1_retained",
+      "failure_mode": "negative_blur_cancellation",
+      "scene_count": 8,
+      "false_clean_rate": 0.0,
+      "flag_rate": 1.0,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.008541962499975853
+    },
+    {
+      "method": "v1_retained",
+      "failure_mode": "ALL_FAILURES",
+      "scene_count": 32,
+      "false_clean_rate": 0.25,
+      "flag_rate": 0.75,
+      "unknown_rate": 0.0,
+      "usable_coverage": 1.0,
+      "mean_runtime_seconds": 0.008224206250076804
+    }
+  ],
+  "v1_standard_benchmark": {
+    "pixels": 73728,
+    "proxy_positive_pixels": 39936,
+    "exact_zero_proxy_pixels": 21504,
+    "proxy_positive_called_pass": 0,
+    "proxy_positive_flagged": 27648,
+    "exact_zero_proxy_called_pass": 21504,
+    "unknown_pixels": 12935,
+    "false_clean_rate": 0.0,
+    "zero_proxy_pass_rate": 1.0,
+    "unknown_rate": 0.1754421657986111,
+    "proxy_positive_flag_rate": 0.6923076923076923,
+    "scene_count": 72,
+    "evidence_type": "SYNTHETIC_ONLY"
+  },
+  "candidate_decisions": {
+    "E1_gain_guard": "RETAIN; improves modeled uniform absorption under an explicit gain bound.",
+    "E2_reference_consensus": "RETAIN; breaks one-corrupt-of-three dirty-reference failure.",
+    "E3_controlled_geometry": "RETAIN; breaks cancellation under registered high-SNR assumptions.",
+    "E4_secondary_optical_hypothesis": "REJECT FOR V1; apparent invisible-residue gain is assumption-driven and physically unvalidated."
+  },
+  "candidate_costs": {
+    "E1_gain_guard": {
+      "extra_live_frames": 0,
+      "acquisition_complexity": "unchanged",
+      "computation": "signed slope/intercept fit",
+      "calibration": "radiometric gain-drift bound"
+    },
+    "E2_reference_consensus": {
+      "extra_live_frames": 0,
+      "acquisition_complexity": "three stored references instead of one",
+      "computation": "pairwise reference distances plus three bounded inferences",
+      "calibration": "reference preparation, dating, drift, and replacement"
+    },
+    "E3_controlled_geometry": {
+      "extra_live_frames": 48,
+      "acquisition_complexity": "registered high-SNR repeat",
+      "computation": "one additional bounded inference",
+      "calibration": "pose bound, registration, linearity, and high-SNR error bound"
+    },
+    "E4_secondary_optical_hypothesis": {
+      "extra_live_frames": 48,
+      "acquisition_complexity": "new wavelength/polarization/angle state",
+      "computation": "one additional bounded inference",
+      "calibration": "material-specific contrast; not established"
+    }
+  },
+  "measurement_cost": {
+    "v0_live_sample_frames": 48,
+    "v1_live_sample_frames": 96,
+    "v0_reference_frames": 48,
+    "v1_reference_library_frames": 288,
+    "computation": "Six bounded inferences plus reference-consistency checks per field of view.",
+    "calibration_burden": "Maintain majority-clean references, gain bound, registration, and high-SNR secondary state."
+  }
+}

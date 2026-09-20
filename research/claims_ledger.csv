@@ -1,1 +1,13 @@
 claim_id,claim,source_ids,evidence_type,status,notes
+C001,The repository implements four-phase demodulation bounded inversion abstention and deterministic synthetic benchmarks,,CODE_AND_TESTS,SUPPORTED,"Implementation fact; not a physical performance claim"
+C002,Frozen v0 bounded-interval benchmark has zero proxy-positive PASS in the 72-scene reference configuration,,SYNTHETIC,SIMULATION-ONLY,"Descriptive pixels with shared scene nuisances; no real-world error-rate implication"
+C003,Under the stated forward model error bound trusted clean reference and geometry bound the feasible interval contains q,,MATHEMATICAL,MODEL-CONDITIONAL,"Guarantee fails when assumptions or reference trust fail"
+C004,The system detects real cleaning residue with useful sensitivity and specificity,,NONE,UNVERIFIED,"Requires material-specific physical validation"
+C005,The system has zero real-world false-clean rate,,NONE,NOT-ALLOWED-AS-SUBMISSION-CLAIM,"Synthetic zero counts and mathematical containment cannot support this"
+C006,Retained v1 reduces aggregate false-clean from 100% to 25% on the four fixed-seed adversarial constructions,,SYNTHETIC,SIMULATION-ONLY,"Dirty reference uniform absorber and cancellation improve; invisible case does not"
+C007,A majority-clean reference ensemble can identify one inconsistent reference in the implemented synthetic model,,SYNTHETIC_AND_ALGORITHMIC,MODEL-CONDITIONAL,"Cannot establish cleanliness when all references share contamination"
+C008,A physically distinct residue with identical observations is detectable from those observations alone,,INFORMATION_THEORETIC,NOT-ALLOWED-AS-SUBMISSION-CLAIM,"Contradicts identifiability; an additional responsive measurement is required"
+C009,The solution identifies microbes species strains sterility or regulatory cleanliness,,NONE,NOT-ALLOWED-AS-SUBMISSION-CLAIM,"Outside implemented modality and evidence"
+C010,The optical mechanism workflow or combination is novel or patentable,"S3;S4;S5;S6;S7;S8;S9;S10;S11",PRIOR_ART_SCREEN,UNVERIFIED,"Many components have clear precedent; no freedom-to-operate or exhaustive novelty opinion"
+C011,The public challenge accepts early TRL2-4 advanced optical concepts and requires results within 30 minutes,S1,OFFICIAL_PUBLIC_PAGE,SUPPORTED,"Current prototype still does not demonstrate physical verification or 30-minute field coverage"
+C012,The hypothetical secondary optical candidate detects optically invisible residue in reality,,NONE,UNVERIFIED,"Synthetic sensitivity test was rejected from retained v1"

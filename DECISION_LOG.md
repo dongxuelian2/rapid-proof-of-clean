@@ -1,93 +1,69 @@
 # Decision log
 
-Lightweight ADR-style record for project-level decisions. Technical route decisions are intentionally out of scope for Phase 0.
+Lightweight ADR-style record for project-level decisions.
 
-## D-001
+## D-001 — Private repository
 
-**Decision**
+**Decision:** Repository starts private.
 
-Repository starts private.
+**Reason:** It may receive restricted challenge material and unpublished notes.
 
-**Reason**
+**Date:** 2026-09-19
+**Status:** Accepted; private remote created and initial `main` pushed.
 
-The project may receive restricted challenge material and unpublished research notes. GitHub visibility must remain private by default.
+## D-002 — No license before IP review
 
-**Date**
+**Decision:** Do not add an open-source license before IP review.
 
-2026-09-19
+**Reason:** Ownership, challenge terms, and future contributions require review.
 
-**Status**
+**Date:** 2026-09-19
+**Status:** Accepted.
 
-Accepted; the private GitHub remote was created and the initial `main` commit was pushed.
+## D-003 — Restricted materials outside Git
 
-## D-002
+**Decision:** Keep restricted/original challenge material outside Git.
 
-**Decision**
+**Reason:** Redistribution and confidentiality rights are not established.
 
-No open-source license before IP review.
+**Date:** 2026-09-19
+**Status:** Accepted.
 
-**Reason**
+## D-004 — No route selected in Phase 0
 
-Ownership, challenge terms, and any future contributions must be reviewed before choosing a license.
+**Decision:** Phase 0 selects no technical direction.
 
-**Date**
+**Reason:** That phase was limited to infrastructure and intake scaffolding.
 
-2026-09-19
+**Date:** 2026-09-19
+**Status:** Superseded by the explicitly authorized Phase 1 active-optical route.
 
-**Status**
+## D-005 — Evidence-linked claims
 
-Accepted
+**Decision:** Important research claims must link to evidence.
 
-## D-003
+**Reason:** The claims/source ledgers provide an auditable boundary.
 
-**Decision**
+**Date:** 2026-09-19
+**Status:** Accepted.
 
-Restricted or original challenge materials stay outside Git.
+## D-006 — Freeze v0
 
-**Reason**
+**Decision:** Freeze the imported active-reflectance implementation as
+`v0-baseline` and keep reference artifacts immutable.
 
-Redistribution, confidentiality, and download rights have not yet been verified.
+**Reason:** Phase 1 comparisons require a non-moving baseline.
 
-**Date**
+**Date:** 2026-09-20
+**Status:** Accepted.
 
-2026-09-19
+## D-007 — Retain evidence-backed v1 layers
 
-**Status**
+**Decision:** Retain reference consensus, bounded gain, and controlled geometry;
+reject the hypothetical secondary-optical response from v1.
 
-Accepted
+**Reason:** Retained controls produced complementary synthetic gains without an
+always-FLAG/UNKNOWN policy. Extra-channel contrast was injected, not measured.
 
-## D-004
-
-**Decision**
-
-No technical direction is selected during Phase 0.
-
-**Reason**
-
-The initialization task is limited to infrastructure and challenge intake scaffolding.
-
-**Date**
-
-2026-09-19
-
-**Status**
-
-Accepted
-
-## D-005
-
-**Decision**
-
-Claims must later be linked to evidence.
-
-**Reason**
-
-The claims ledger and source ledger provide a traceable basis for later proposal work.
-
-**Date**
-
-2026-09-19
-
-**Status**
-
-Accepted
+**Date:** 2026-09-20
+**Status:** Accepted as a synthetic research candidate; physical assumptions unvalidated.

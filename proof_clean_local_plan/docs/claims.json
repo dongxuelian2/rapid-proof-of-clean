@@ -1,17 +1,32 @@
 {
-  "known_precedent": "Structured-light modulation can reveal some surface contamination/defects in published settings.",
-  "implemented_here": "Synthetic rendering, bounded-error inversion, abstention, benchmarks and failure cases.",
-  "not_validated": [
-    "real residue sensitivity",
-    "bacterial detection",
-    "strain identification",
-    "whole-room operation",
-    "hardware cost",
-    "experimental TRL 3",
-    "novelty",
-    "patentability"
-  ],
-  "system_maturity_wording": "Early concept with a computational component proof of concept; experimental system TRL 3 not established.",
+  "audit_date": "2026-09-20",
   "evidence_type": "SYNTHETIC_ONLY",
+  "claims": [
+    {
+      "claim": "The repository implements bounded active-reflectance inference, abstention, adversarial benchmarks, and a v1 reference/geometry/gain workflow.",
+      "status": "SUPPORTED"
+    },
+    {
+      "claim": "The feasible interval contains q when the forward model, deterministic error bound, geometry bound, visibility mask, and clean-reference assumptions hold.",
+      "status": "MODEL-CONDITIONAL"
+    },
+    {
+      "claim": "v1 reduces aggregate false-clean from 100% to 25% across the four prioritized fixed-seed synthetic failure constructions.",
+      "status": "SIMULATION-ONLY"
+    },
+    {
+      "claim": "The implementation detects real cleaning residues with useful sensitivity or specificity.",
+      "status": "UNVERIFIED"
+    },
+    {
+      "claim": "The implementation proves real-world cleanliness, zero false-clean rate, microbial absence, species/strain identity, sterility, or a real LOD.",
+      "status": "NOT-ALLOWED-AS-SUBMISSION-CLAIM"
+    },
+    {
+      "claim": "The sensing principle or workflow is novel or patentable.",
+      "status": "UNVERIFIED"
+    }
+  ],
+  "system_maturity_wording": "Early research candidate with computational evidence; physical system validation and experimental TRL remain unestablished.",
   "human_review_required": true
 }
