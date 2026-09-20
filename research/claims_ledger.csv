@@ -11,3 +11,7 @@ C009,The solution identifies microbes species strains sterility or regulatory cl
 C010,The optical mechanism workflow or combination is novel or patentable,"S3;S4;S5;S6;S7;S8;S9;S10;S11",PRIOR_ART_SCREEN,UNVERIFIED,"Many components have clear precedent; no freedom-to-operate or exhaustive novelty opinion"
 C011,The public challenge accepts early TRL2-4 advanced optical concepts and requires results within 30 minutes,S1,OFFICIAL_PUBLIC_PAGE,SUPPORTED,"Current prototype still does not demonstrate physical verification or 30-minute field coverage"
 C012,The hypothetical secondary optical candidate detects optically invisible residue in reality,,NONE,UNVERIFIED,"Synthetic sensitivity test was rejected from retained v1"
+C013,The conservative coverage model predicts 21.3 minutes for 12 square metres and 36.7 minutes for 25 square metres,,ASSUMPTION_MODEL,MODEL-ONLY,"Inputs are unmeasured; this is not hardware or operator performance"
+C014,The repository contains physical residue or professional-environment validation data,,REPOSITORY_AUDIT,NOT-SUPPORTED,"No user physical images sensor frames or calibration datasets were found"
+C015,The full assurance workflow is novel and free to operate,"S3;S5;S6;S7;S8;S12;S13;S14;S16",SCOPED_PRIOR_ART_SEARCH,UNVERIFIED,"Search found substantial component overlap; professional legal analysis required"
+C016,The proposed workflow uses no routine single-use imaging reagent,,DESIGN,DESIGN-LEVEL,"References still require preparation maintenance and replacement"

@@ -137,3 +137,38 @@ candidate without overstating physical evidence.
 
 Human agreement review, then the pre-registered coupon pilot and focused
 multi-reference/abstention patent-product search. Do not write a final proposal yet.
+
+## 2026-09-20 — Finalization and proposal package
+
+### Goal
+
+Convert the audited synthetic research candidate into an evidence-bounded,
+form-aligned submission package without inventing physical results.
+
+### Actions
+
+- Re-ran the frozen v0/Phase 1 pipeline and preserved the comparison.
+- Extended prior-art review across literature, patents and commercial alternatives.
+- Added executable coverage/time and deterministic nuisance-envelope models.
+- Audited the repository for real sensor data; none was present, so the physical
+  experiment remains explicitly not executed.
+- Wrote architecture, scope, BOM, calibration map, coupon protocol,
+  preregistration, claims, risks, TRL, workflow and positioning documents.
+- Drafted proposal v1, completed two red-team rounds and a nonexpert read, then
+  produced the field-limited final proposal and claim audit.
+- Generated three labeled figures and a curated submission package.
+
+### Findings
+
+- Conservative modeled time is 21.3 minutes for 12 m² and 36.7 minutes for 25 m²;
+  stress scenarios fail the 30-minute objective from 4 m².
+- Synthetic v1 is sensitive to noise, common reference aging and large illumination
+  gradients through UNKNOWN or false flags.
+- Optical/prior-art overlap is substantial; only the assurance-workflow combination
+  remains a possible distinction, with novelty and FTO unverified.
+
+### Decision
+
+Final classification is
+`SUBMISSION_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION`. Human agreement,
+eligibility, experience and submission actions remain outside the software agent.
