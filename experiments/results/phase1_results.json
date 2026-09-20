@@ -34,7 +34,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0011693624996951257
+      "mean_runtime_seconds": 0.0011962375006078219
     },
     {
       "method": "v0_single_reference",
@@ -44,7 +44,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0011445249997450446
+      "mean_runtime_seconds": 0.0011394250000194006
     },
     {
       "method": "v0_single_reference",
@@ -54,7 +54,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0011569124999368796
+      "mean_runtime_seconds": 0.0011580499999581662
     },
     {
       "method": "v0_single_reference",
@@ -64,7 +64,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0011381125000298198
+      "mean_runtime_seconds": 0.0011696999995365331
     },
     {
       "method": "v0_single_reference",
@@ -74,7 +74,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0011522281248517174
+      "mean_runtime_seconds": 0.0011658531250304804
     },
     {
       "method": "E1_gain_guard",
@@ -84,7 +84,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0021728124997935083
+      "mean_runtime_seconds": 0.0022640500001216424
     },
     {
       "method": "E1_gain_guard",
@@ -94,7 +94,7 @@
       "flag_rate": 0.625,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0013372124997204082
+      "mean_runtime_seconds": 0.001344887500636105
     },
     {
       "method": "E1_gain_guard",
@@ -104,7 +104,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0013451750003241614
+      "mean_runtime_seconds": 0.001365725000596285
     },
     {
       "method": "E1_gain_guard",
@@ -114,7 +114,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0013472000000547268
+      "mean_runtime_seconds": 0.0013530500000342727
     },
     {
       "method": "E1_gain_guard",
@@ -124,7 +124,7 @@
       "flag_rate": 0.15625,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0015505999999732012
+      "mean_runtime_seconds": 0.0015819281253470763
     },
     {
       "method": "E2_reference_consensus",
@@ -134,7 +134,7 @@
       "flag_rate": 1.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0031367999999929452
+      "mean_runtime_seconds": 0.0031927999984873168
     },
     {
       "method": "E2_reference_consensus",
@@ -144,7 +144,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0042434125000454515
+      "mean_runtime_seconds": 0.004130637500566081
     },
     {
       "method": "E2_reference_consensus",
@@ -154,7 +154,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.004288299999643641
+      "mean_runtime_seconds": 0.004299849999370053
     },
     {
       "method": "E2_reference_consensus",
@@ -164,7 +164,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0041900375001659995
+      "mean_runtime_seconds": 0.004199274999336922
     },
     {
       "method": "E2_reference_consensus",
@@ -174,7 +174,7 @@
       "flag_rate": 0.25,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.003964637499962009
+      "mean_runtime_seconds": 0.003955640624440093
     },
     {
       "method": "E3_controlled_geometry",
@@ -184,7 +184,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.001863850000063394
+      "mean_runtime_seconds": 0.001873137499387667
     },
     {
       "method": "E3_controlled_geometry",
@@ -194,7 +194,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0018417999999655876
+      "mean_runtime_seconds": 0.0017729000001054374
     },
     {
       "method": "E3_controlled_geometry",
@@ -204,7 +204,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0019637125001281674
+      "mean_runtime_seconds": 0.0018017249990407436
     },
     {
       "method": "E3_controlled_geometry",
@@ -214,7 +214,7 @@
       "flag_rate": 1.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0018460250000771339
+      "mean_runtime_seconds": 0.0018164125003750087
     },
     {
       "method": "E3_controlled_geometry",
@@ -224,7 +224,7 @@
       "flag_rate": 0.25,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.0018788468750585707
+      "mean_runtime_seconds": 0.0018160437497272142
     },
     {
       "method": "E4_secondary_optical_hypothesis",
@@ -234,7 +234,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.002025075000119614
+      "mean_runtime_seconds": 0.001986837499316607
     },
     {
       "method": "E4_secondary_optical_hypothesis",
@@ -244,7 +244,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.001849037500051054
+      "mean_runtime_seconds": 0.0018633500008036208
     },
     {
       "method": "E4_secondary_optical_hypothesis",
@@ -254,7 +254,7 @@
       "flag_rate": 0.994140625,
       "unknown_rate": 0.005859375,
       "usable_coverage": 0.994140625,
-      "mean_runtime_seconds": 0.0018891374998020183
+      "mean_runtime_seconds": 0.0019099249993814738
     },
     {
       "method": "E4_secondary_optical_hypothesis",
@@ -264,7 +264,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 1.0,
       "usable_coverage": 0.0,
-      "mean_runtime_seconds": 0.0018519875000038155
+      "mean_runtime_seconds": 0.0018394625008113508
     },
     {
       "method": "E4_secondary_optical_hypothesis",
@@ -274,7 +274,7 @@
       "flag_rate": 0.24853515625,
       "unknown_rate": 0.25146484375,
       "usable_coverage": 0.74853515625,
-      "mean_runtime_seconds": 0.0019038093749941254
+      "mean_runtime_seconds": 0.0018998937500782631
     },
     {
       "method": "v1_retained",
@@ -284,7 +284,7 @@
       "flag_rate": 1.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.006692325000585697
+      "mean_runtime_seconds": 0.006699887499962642
     },
     {
       "method": "v1_retained",
@@ -294,7 +294,7 @@
       "flag_rate": 1.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.008853187499880733
+      "mean_runtime_seconds": 0.008866962500178488
     },
     {
       "method": "v1_retained",
@@ -304,7 +304,7 @@
       "flag_rate": 0.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.008809349999864935
+      "mean_runtime_seconds": 0.00873888749993057
     },
     {
       "method": "v1_retained",
@@ -314,7 +314,7 @@
       "flag_rate": 1.0,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.008541962499975853
+      "mean_runtime_seconds": 0.00884567499952027
     },
     {
       "method": "v1_retained",
@@ -324,7 +324,7 @@
       "flag_rate": 0.75,
       "unknown_rate": 0.0,
       "usable_coverage": 1.0,
-      "mean_runtime_seconds": 0.008224206250076804
+      "mean_runtime_seconds": 0.008287853124897993
     }
   ],
   "v1_standard_benchmark": {

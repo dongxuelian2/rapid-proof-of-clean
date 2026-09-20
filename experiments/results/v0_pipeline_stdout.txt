@@ -9,7 +9,7 @@ test_no_nan (test_core.CoreTests.test_no_nan) ... ok
 test_slope_interval (test_core.CoreTests.test_slope_interval) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.132s
+Ran 8 tests in 0.143s
 
 OK
 
