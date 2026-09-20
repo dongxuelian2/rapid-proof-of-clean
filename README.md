@@ -5,11 +5,15 @@ Research and submission workspace for the Rapid Proof of Clean innovation challe
 ## Current phase
 
 ```text
-Phase 0 — Infrastructure / challenge intake
-No technical solution direction has been selected.
+Phase 0 complete — infrastructure plus an existing computational proof-of-concept handoff
+No new technical direction is selected in this consolidation pass.
 ```
 
 This repository is intentionally limited to project infrastructure, challenge intake, research bookkeeping, reproducibility, and later submission preparation. It does not choose or endorse a technical approach.
+
+## Continuation entry
+
+The existing computational work is preserved as a self-contained subproject. Start the next session with [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md); it is the single handoff entry for the imported implementation, evidence, baseline results, and open items.
 
 ## Repository policy
 
@@ -45,4 +49,4 @@ The bootstrap script uses the installed `uv` tool when available, creates `.venv
 
 ## Scope guard
 
-The current task stops after infrastructure initialization. Phase 1 is reserved for challenge intake, rules/IP audit, and broad technology landscape scouting.
+This consolidation pass does not add a technical direction or solve any failure mode. Continue only from `PROJECT_HANDOFF.md` after reviewing the existing evidence and its limits.

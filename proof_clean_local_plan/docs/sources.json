@@ -1,0 +1,42 @@
+[
+  {
+    "id": "S1",
+    "title": "Novel Technologies for Rapid Proof of Clean in Professional Environments",
+    "url": "https://www.innocentive.com/challenges/novel-technologies-for-rapid-proof-of-clean-in-professional-environments/",
+    "purpose": "核查本次比赛的范围、排除项、提交规则、截止时间、AI 条款和协议；最终以实时页面及登录后协议为准。",
+    "supports": "赛事规则",
+    "does_not_support": "本方案已经被主办方接受，或已经达到 TRL 3"
+  },
+  {
+    "id": "S2",
+    "title": "NASA: Technology Readiness Levels",
+    "url": "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/technology-readiness-levels/",
+    "purpose": "理解原理验证与成熟系统的区别。",
+    "supports": "TRL 分级的一般解释",
+    "does_not_support": "纯仿真自动构成整套硬件技术的 TRL 3"
+  },
+  {
+    "id": "S3",
+    "title": "Huang et al. (2019), Structured-light modulation analysis technique for contamination and defect detection of specular surfaces and transparent objects",
+    "url": "https://doi.org/10.1364/OE.27.037721",
+    "purpose": "最接近的结构光调制检测工作，应作为基线与已有技术。",
+    "supports": "相关光学机制及已有实验先例",
+    "does_not_support": "本项目的创新性、真实食品残留检出限、细菌检测、整室性能"
+  },
+  {
+    "id": "S4",
+    "title": "Tian et al. (2025), A Polarimetry-based Field-deployable Non-interruptive Mirror Soiling Detection Method",
+    "url": "https://arxiv.org/abs/2501.01643",
+    "purpose": "核对大面积镜面污染光学检测的相邻技术。",
+    "supports": "太阳能镜面场景已有不同路线的研究先例",
+    "does_not_support": "室内卫生表面上可以直接得到相同性能"
+  },
+  {
+    "id": "S5",
+    "title": "WO2008029946A1: Contamination evaluation method and related systems",
+    "url": "https://patents.google.com/patent/WO2008029946A1/en",
+    "purpose": "提醒参与者污染评估、指纹及清洁前后恢复评估有长期已有技术。",
+    "supports": "存在相关已公开技术内容",
+    "does_not_support": "该专利的当前法律状态、自由实施结论或本方案的专利性"
+  }
+]

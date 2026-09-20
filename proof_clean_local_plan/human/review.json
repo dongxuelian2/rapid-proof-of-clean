@@ -1,0 +1,13 @@
+{
+  "participant_name": "TO_BE_FILLED_BY_PARTICIPANT",
+  "original_contribution": "TO_BE_WRITTEN_BY_PARTICIPANT",
+  "read_challenge_and_agreement": false,
+  "read_closest_prior_art": false,
+  "checked_commercial_differentiation": false,
+  "verified_real_operating_scope": false,
+  "reviewed_failures": false,
+  "reviewed_ai_rule": false,
+  "chosen_honest_trl": false,
+  "submission_authorized_by_participant": false,
+  "note": "不允许模型自动把这些字段改成 true。每次人工确认应有日期、理由、证据文件。"
+}

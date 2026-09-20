@@ -1,0 +1,16 @@
+evidence_type,target_surface_area_m2,assumed_nominal_view_area_m2,assumed_useful_fraction,views,frequencies,sample_frames_per_view,reference_frames_per_view,assumed_seconds_per_frame,assumed_move_seconds,assumed_compute_seconds_per_view,hypothetical_total_minutes,under_30_minutes_hypothetically
+ASSUMPTION_ONLY,20.0,0.01,0.65,3077,2,16,16,0.15,3.0,0.1,408.138,False
+ASSUMPTION_ONLY,20.0,0.05,0.65,616,2,16,16,0.15,3.0,0.1,84.107,False
+ASSUMPTION_ONLY,20.0,0.1,0.65,308,2,16,16,0.15,3.0,0.1,43.553,False
+ASSUMPTION_ONLY,20.0,0.25,0.65,124,2,16,16,0.15,3.0,0.1,19.327,True
+ASSUMPTION_ONLY,20.0,1.0,0.65,31,2,16,16,0.15,3.0,0.1,7.082,True
+ASSUMPTION_ONLY,20.0,0.01,0.65,3077,3,24,24,0.15,3.0,0.1,531.218,False
+ASSUMPTION_ONLY,20.0,0.05,0.65,616,3,24,24,0.15,3.0,0.1,108.747,False
+ASSUMPTION_ONLY,20.0,0.1,0.65,308,3,24,24,0.15,3.0,0.1,55.873,False
+ASSUMPTION_ONLY,20.0,0.25,0.65,124,3,24,24,0.15,3.0,0.1,24.287,True
+ASSUMPTION_ONLY,20.0,1.0,0.65,31,3,24,24,0.15,3.0,0.1,8.322,True
+ASSUMPTION_ONLY,20.0,0.01,0.65,3077,6,48,48,0.15,3.0,0.1,900.458,False
+ASSUMPTION_ONLY,20.0,0.05,0.65,616,6,48,48,0.15,3.0,0.1,182.667,False
+ASSUMPTION_ONLY,20.0,0.1,0.65,308,6,48,48,0.15,3.0,0.1,92.833,False
+ASSUMPTION_ONLY,20.0,0.25,0.65,124,6,48,48,0.15,3.0,0.1,39.167,False
+ASSUMPTION_ONLY,20.0,1.0,0.65,31,6,48,48,0.15,3.0,0.1,12.042,True

@@ -1,0 +1,16 @@
+{
+  "seed": 20260919,
+  "image_size": 32,
+  "screen_coordinate_width": 256,
+  "frequencies_cycles_per_screen": [2, 4, 8, 16, 32, 48],
+  "reference_blur_variance_pixel2": 0.8,
+  "clean_variation_bound_pixel2": 0.08,
+  "proxy_threshold_pixel2": 0.5,
+  "additive_noise_bound": 0.0015,
+  "quantization_levels": 256,
+  "scenes_per_condition": 12,
+  "evidence_type": "SYNTHETIC_BOUNDED_ERROR_TOY_MODEL",
+  "physical_sensitivity_validated": false,
+  "species_identification": false,
+  "whole_room_hygiene_validated": false
+}

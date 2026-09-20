@@ -1,0 +1,16 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "processor": "",
+  "config_sha256": "e2cf9adb66bafd2959060bc6f488e4be3c1419ba59249c9602a5ea0d911d43f0",
+  "recorded_utc": "2026-09-19T13:52:27.840561+00:00",
+  "evidence_type": "SYNTHETIC_BOUNDED_ERROR_TOY_MODEL",
+  "gpu_required": false,
+  "network_required": false,
+  "code_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/core.py": "15700aadfa462a9b028b9b2653cca49bdfeb27771e64af0784f784ab7efcf935",
+    "src/simulation.py": "a90e2b6fe57a089bd569711b4e60e54edd459968e7653900486e763de01818cb"
+  }
+}

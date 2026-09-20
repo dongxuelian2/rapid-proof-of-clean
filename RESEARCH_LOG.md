@@ -35,6 +35,37 @@ Initialize a clean, reproducible research workspace for Rapid Proof of Clean.
 
 Verify challenge intake and rules/IP terms in the next explicitly authorized phase.
 
+## 2026-09-20
+
+### Goal
+
+Consolidate the supplied `proof_clean_local_plan.zip` into a directly usable project state without extending the research.
+
+### Actions
+
+- Extracted and read the archive's code, documents, task cards, evidence files, reference outputs, and manifest.
+- Verified the archive manifest and ran its existing tests and integrity pipeline.
+- Preserved the implementation as `proof_clean_local_plan/` and created `PROJECT_HANDOFF.md` as the sole continuation entry.
+
+### Findings
+
+- The imported work is a synthetic, model-conditional computational proof of concept; it is not physical validation or a completed submission.
+- The reference metrics reproduce under the current project environment.
+- The major failure modes are recorded in the handoff and were not addressed in this pass.
+
+### Decisions
+
+- Do not rewrite the imported core implementation.
+- Do not import generated validation outputs; keep only the archive's reference run.
+
+### Open questions
+
+- All human, physical, current-rule, novelty, deployment, and submission gates listed in `PROJECT_HANDOFF.md` remain open.
+
+### Next
+
+Read `PROJECT_HANDOFF.md`, then follow the existing task-card order only after explicit authorization.
+
 ## 2026-09-19
 
 ### Goal

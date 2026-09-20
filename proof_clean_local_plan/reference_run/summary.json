@@ -1,0 +1,149 @@
+{
+  "evidence_type": "SYNTHETIC_ONLY",
+  "physical_detection_validated": false,
+  "novelty_established": false,
+  "system_trl_certified": false,
+  "metrics": [
+    {
+      "method": "uniform_DC",
+      "proxy_positive_called_pass": 39581,
+      "proxy_positive_pixels": 39936,
+      "false_pass_fraction": 0.9911107772435898,
+      "zero_proxy_pass_fraction": 0.9906994047619048,
+      "unknown_fraction": 0.0,
+      "proxy_positive_flag_fraction": 0.008889222756410256,
+      "worst_scene_false_pass_fraction": 0.9970703125,
+      "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+    },
+    {
+      "method": "single_frequency_modulation",
+      "proxy_positive_called_pass": 3308,
+      "proxy_positive_pixels": 39936,
+      "false_pass_fraction": 0.08283253205128205,
+      "zero_proxy_pass_fraction": 1.0,
+      "unknown_fraction": 0.0,
+      "proxy_positive_flag_fraction": 0.917167467948718,
+      "worst_scene_false_pass_fraction": 1.0,
+      "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+    },
+    {
+      "method": "multi_frequency_point_estimate",
+      "proxy_positive_called_pass": 2591,
+      "proxy_positive_pixels": 39936,
+      "false_pass_fraction": 0.06487880608974358,
+      "zero_proxy_pass_fraction": 1.0,
+      "unknown_fraction": 0.0,
+      "proxy_positive_flag_fraction": 0.9351211939102564,
+      "worst_scene_false_pass_fraction": 0.9814453125,
+      "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+    },
+    {
+      "method": "bounded_interval",
+      "proxy_positive_called_pass": 0,
+      "proxy_positive_pixels": 39936,
+      "false_pass_fraction": 0.0,
+      "zero_proxy_pass_fraction": 1.0,
+      "unknown_fraction": 0.18433973524305555,
+      "proxy_positive_flag_fraction": 0.6923076923076923,
+      "worst_scene_false_pass_fraction": 0.0,
+      "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+    },
+    {
+      "method": "interval_two_frequencies",
+      "proxy_positive_called_pass": 0,
+      "proxy_positive_pixels": 39936,
+      "false_pass_fraction": 0.0,
+      "zero_proxy_pass_fraction": 1.0,
+      "unknown_fraction": 0.19154188368055555,
+      "proxy_positive_flag_fraction": 0.6923076923076923,
+      "worst_scene_false_pass_fraction": 0.0,
+      "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+    },
+    {
+      "method": "interval_three_frequencies",
+      "proxy_positive_called_pass": 0,
+      "proxy_positive_pixels": 39936,
+      "false_pass_fraction": 0.0,
+      "zero_proxy_pass_fraction": 1.0,
+      "unknown_fraction": 0.19139268663194445,
+      "proxy_positive_flag_fraction": 0.6923076923076923,
+      "worst_scene_false_pass_fraction": 0.0,
+      "note": "Pixel ratios are descriptive, not independent-sample confidence estimates."
+    }
+  ],
+  "stress": [
+    {
+      "condition": "low_signal",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 1.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "occluded",
+      "pass_fraction": 0.5,
+      "unknown_fraction": 0.5,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "clipped",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 1.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "noise_bound_violated",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 1.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "defocus_bound_violated",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 0.0,
+      "flag_fraction": 1.0
+    },
+    {
+      "condition": "dirty_reference",
+      "pass_fraction": 1.0,
+      "unknown_fraction": 0.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "uniform_absorber",
+      "pass_fraction": 1.0,
+      "unknown_fraction": 0.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "optically_invisible_residue",
+      "pass_fraction": 1.0,
+      "unknown_fraction": 0.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "scratch_like_response",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 0.0,
+      "flag_fraction": 1.0
+    },
+    {
+      "condition": "phase_motion",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 1.0,
+      "flag_fraction": 0.0
+    },
+    {
+      "condition": "frequency_dependent_gain",
+      "pass_fraction": 0.0,
+      "unknown_fraction": 0.002197265625,
+      "flag_fraction": 0.997802734375
+    },
+    {
+      "condition": "negative_blur_cancellation",
+      "pass_fraction": 1.0,
+      "unknown_fraction": 0.0,
+      "flag_fraction": 0.0
+    }
+  ],
+  "config_sha256": "e2cf9adb66bafd2959060bc6f488e4be3c1419ba59249c9602a5ea0d911d43f0"
+}

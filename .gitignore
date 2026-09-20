@@ -16,6 +16,8 @@ downloads/
 tmp/
 challenge/raw/
 challenge/downloads/
+proof_clean_local_plan/outputs/*
+!proof_clean_local_plan/outputs/.gitkeep
 
 *.log
 *.egg-info/
