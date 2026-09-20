@@ -1,7 +1,12 @@
 import numpy as np
 from proof_clean_local_plan.src.core import FLAG, PASS
 
-from rapid_proof_clean.advanced import DiversityConfig, infer_diversity
+from rapid_proof_clean.advanced import (
+    DiversityConfig,
+    infer_diversity,
+    infer_diversity_features,
+    select_signature_features,
+)
 
 
 def clean_cube(size: int = 4) -> np.ndarray:
@@ -22,3 +27,12 @@ def test_diversity_flags_signature_shape_change() -> None:
     references = np.stack([clean_cube(), clean_cube(), clean_cube()])
     result = infer_diversity(references, sample, "combined", DiversityConfig())
     assert np.all(result["status"] == FLAG)
+
+
+def test_explicit_feature_subset_matches_manual_selection() -> None:
+    references = np.stack([clean_cube(), clean_cube(), clean_cube()])
+    sample = clean_cube()
+    selected = select_signature_features(sample, [0, 6, 7, 8])
+    assert selected.shape == (4, 4, 4)
+    result = infer_diversity_features(references, sample, [0, 6, 7, 8])
+    assert np.all(result["status"] == PASS)

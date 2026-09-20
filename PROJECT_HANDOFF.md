@@ -34,6 +34,10 @@ Updated 2026-09-20. Current classification:
   v1→v2 results.
 - `docs/FINAL_DIFFERENTIATION_MAP.md`: closer patent mapping and final separation
   of existing technology, combination candidates and engineering details.
+- `docs/FRAME_BUDGET_OPTIMIZATION.md`: held-out frame Pareto, retained 44-frame
+  v2.1 schedule, staged early-FLAG semantics and legacy-failure parity audit.
+- `docs/WORKFLOW_DIFFERENTIATION_EVIDENCE.md`: element-level comparison against
+  the closest inspected cleanliness patents and commercial product disclosures.
 - Source/claim ledgers and the prior-art matrix now include the new evidence and
   close patent records.
 
@@ -57,16 +61,26 @@ thickness × stain size × surface finish × angle × wavelength × polarization
 field-noise distribution needed to calibrate this system. Glazed ceramic remains
 especially weakly supported by matched quantitative evidence.
 
-## Retained v2 candidate
+## Retained v2.1 candidate
 
 The active-reflectance / structured-light main line remains intact. The candidate
 v2 adds 470/550/850 nm × 15°/55° × s/p reference-relative intensity to v1. The
 diversity score removes common exposure, so it responds only to signature shape.
 Any channel FLAG wins; PASS requires both; ambiguity becomes UNKNOWN.
 
-This adds 12 sample intensity states to the v1 96 sample frames per field of view
-(108 total before retries). Hardware timing, polarization registration and
-radiometric bounds have not been established.
+Frame ablation now retains only the 2 and 48 cycles/screen endpoints in both
+structured states: 32 structured frames plus 12 diversity states = **44 maximum
+sample frames/FOV**, down 59.3% from 108. A diversity-first schedule can issue an
+FOV-level early FLAG at 12 frames, or after primary at 28, but every clean PASS
+and complete pixel map requires all 44. Hardware timing, polarization registration
+and radiometric bounds have not been established.
+
+On the held-out simulator split, 108 and 44 frames have identical metrics:
+nonmatched false-clean 5.531%, UNKNOWN 0.137%, clean PASS 96.330%, clean
+false-FLAG 0%, and matched-invisible false-clean 96.519%. The old fixed failures
+also remain identical: the compressed dual-state path flags dirty-reference,
+uniform-absorber and cancellation cases and still false-cleans the deliberately
+observation-matched case. See `docs/FRAME_BUDGET_OPTIMIZATION.md`.
 
 ## Frozen realistic-benchmark result
 
@@ -103,16 +117,21 @@ multiwavelength contamination ratios. Together with structured-light,
 polarization, remeasurement, reject-option and coverage prior art, no individual
 ingredient is a credible novelty anchor.
 
-The only remaining combination candidate is the complete cleaning assurance
-sequence: multi-reference confidence → bounded multi-state inference → explicit
-UNKNOWN → controlled remeasurement → visible-coverage record → false-clean audit.
-The scoped search did not find that exact complete sequence, but novelty,
-non-obviousness and freedom to operate remain unverified.
+The broad sequence is no longer a credible distinction: SITA, Evident CIX100 and
+iFactory public product material collectively disclose normalized/full-surface
+maps, calibration/self-checks, limits or pass/fail, re-cleaning guidance,
+coverage and records. The remaining narrow hypothesis is the clean-PASS
+conjunction: reference integrity ∧ bounded evidence across required active states
+∧ coverage validity, with any failed premise forced to UNKNOWN and used to select
+remeasurement, plus a false-clean release audit. No inspected public record stated
+the complete conjunction. Novelty, non-obviousness and freedom to operate remain
+unverified; see `docs/WORKFLOW_DIFFERENTIATION_EVIDENCE.md`.
 
 ## Reproduce
 
 ```powershell
 & .\.venv\Scripts\python.exe scripts\run_v2_study.py
+& .\.venv\Scripts\python.exe scripts\run_frame_optimization.py
 & .\.venv\Scripts\python.exe scripts\run_submission_pipeline.py
 ```
 
@@ -137,5 +156,5 @@ false-clean, UNKNOWN, false-FLAG and visible coverage on held-out coupons.
    identify shared contamination, and real finishes/aging may exceed the frozen
    bounds or drive excessive UNKNOWN/false-FLAG.
 3. **Fundamental and operational coverage:** fully observation-matched thin films,
-   small stains at registration boundaries, occluded areas and 108-frame timing
+   small stains at registration boundaries, occluded areas and 44-frame timing
    remain unresolved.

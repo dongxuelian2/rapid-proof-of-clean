@@ -15,12 +15,14 @@ verification products already use ATP swabs, fluorescent/retroreflective markers
 and digital workflows. Industrial systems already project patterns and inspect
 large shiny surfaces.
 
-The search did **not confirm** one source that combines all of the following for
-professional cleaning verification: multiple controlled references with corruption
-confidence, model-bounded intervals, an explicit reject/UNKNOWN class, controlled
-remeasurement for ambiguity, visible-coverage accounting, and a false-clean
-adversarial registry. This may be a workflow-level distinction. It is not proven
-novelty, and it does not create a new physical observable.
+The new product review removes the broad workflow as a plausible novelty claim:
+commercial pages already describe baselines, maps, limits/pass-fail, coverage,
+re-cleaning guidance and records. The search did **not confirm** one source that
+requires, jointly for a clean PASS, multiple controlled references with corruption
+confidence, model-bounded evidence across required states and valid coverage,
+forcing any failed premise to UNKNOWN and selecting remeasurement. This narrower
+assurance conjunction may be a technical distinction. It is not proven novelty,
+and it does not create a new physical observable.
 
 ## Closest technical literature
 
@@ -60,6 +62,15 @@ verified.
   monitoring.
 - Micro-Epsilon reflectCONTROL applies phase-measuring deflectometry to full-field
   shiny-surface defect inspection, including robotic/multi-position systems.
+- Fraunhofer F-Camera and SITA FluoSpection perform native full-field fluorescence
+  contamination imaging; SITA includes normalized maps, zone limits,
+  before/after comparison and reports.
+- Evident CIX100 combines calibration-device checks, polarization-based particle
+  imaging, coverage, OK/NOK, early rejection and traceable reports on extracted
+  filter samples.
+- iFactory's vendor page describes controlled lighting, material/surface
+  baselines, zone pass/fail maps, coverage, re-clean alerts and logged evidence.
+  Its performance and regulatory statements were not independently validated.
 
 The proposal is complementary rather than a universal replacement: it trades
 chemical/biological specificity for non-contact area coverage and explicit
@@ -68,9 +79,9 @@ species identification.
 
 ## Safe statements
 
-Use: “a research candidate that combines established active optical measurement
-with reference-confidence, bounded decisions, explicit abstention, coverage logs
-and remeasurement for cleaning workflows.”
+Use: “a research candidate that permits clean release only when reference
+integrity, bounded evidence across required active states and coverage validity
+all hold; failed premises become UNKNOWN and select remeasurement.”
 
 Do not use: “novel structured-light contamination detector,” “first optical proof
 of clean,” “detects all residues,” “replaces ATP,” or “freedom to operate.”

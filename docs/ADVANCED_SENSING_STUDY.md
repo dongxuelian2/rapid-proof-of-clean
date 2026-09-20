@@ -3,12 +3,13 @@
 Updated 2026-09-20. All implementation results are simulation-only. The active-
 reflectance / structured-light main line is unchanged.
 
-## Retained v2 candidate
+## Retained v2.1 candidate
 
-v2 keeps the full v1 path and adds one reference-relative diversity cube:
+v2.1 keeps the v1 logic and v2 diversity cube while compressing the acquisition:
 
-1. v1: two orientations × six spatial frequencies × four phase steps × primary
-   and controlled-geometry states = 96 sample frames per field of view;
+1. structured path: two orientations × two endpoint spatial frequencies × four
+   phase steps × primary and controlled-geometry states = 32 sample frames per
+   field of view;
 2. v2 auxiliary: 470/550/850 nm × 15°/55° × s/p polarization = 12 intensity
    states per field of view (hardware scheduling is not validated);
 3. three clean references are checked for consensus in each path;
@@ -18,8 +19,14 @@ v2 keeps the full v1 path and adds one reference-relative diversity cube:
 
 The auxiliary cube was implemented in
 `src/rapid_proof_clean/realistic.py` and bounded three-way inference in
-`src/rapid_proof_clean/advanced.py`. Configuration is frozen in
-`experiments/v2_config.json`; `scripts/run_v2_study.py` regenerates the benchmark.
+`src/rapid_proof_clean/advanced.py`. The original configuration is frozen in
+`experiments/v2_config.json`; `scripts/run_frame_optimization.py` evaluates the
+compressed schedules without retuning inference thresholds.
+
+The selected maximum is 44 frames/FOV, 59.3% below v2's 108. Diversity-first
+staging permits an FOV-level early FLAG at 12 frames and a second early FLAG at
+28 frames, but every PASS and every complete pixel map requires 44. See
+`docs/FRAME_BUDGET_OPTIMIZATION.md`.
 
 ## Architecture comparison
 
@@ -74,8 +81,10 @@ phase/gradient defect response from modulation/reflectivity changes
 ([review](https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2023.1237687/full)).
 
 **More frequencies cannot solve a modulation-identical residue.** They narrow the
-same transfer-function estimate. They help model checking and q precision, but
-do not distinguish equal observation distributions.
+same transfer-function estimate. In the fixed realistic design/audit split, six
+frequencies and the two endpoints produced identical decision metrics. Mid-band
+frequencies are therefore removed from v2.1, while the equality is treated as a
+model-conditional ablation result rather than a physical sufficiency claim.
 
 **Reference-free checks cannot certify cleanliness.** Phase closure, saturation,
 low signal, exposure consistency and repeated acquisition can invalidate a PASS
@@ -84,11 +93,12 @@ evidence.
 
 ## Physical implementation implications
 
-The simulation-retained candidate adds 12 sample intensity states, increasing the
-per-view sample count from 96 to 108 before retries. Three reference cubes add 36
-reference images but may be amortized only if reference stability is demonstrated.
-A division-of-focal-plane polarization camera could reduce sequential captures,
-but spatial interpolation and channel imbalance would need new bounds. No hardware
+The simulation-retained v2.1 candidate uses 32 structured and 12 diversity sample
+states: 44 per view before retries. Three diversity reference cubes add 36
+reference images; structured reference libraries are likewise excluded from the
+sample count and may be amortized only if stability is demonstrated. A
+division-of-focal-plane polarization camera could reduce sequential captures, but
+spatial interpolation and channel imbalance would need new bounds. No hardware
 BOM, timing, registration or radiometric calibration claim is updated yet.
 
 ## Promotion gate

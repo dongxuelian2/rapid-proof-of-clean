@@ -26,6 +26,12 @@ orthogonal test.
 
 ## Acquisition
 
+The retained v2.1 research schedule supersedes the live-sample count below while
+preserving its logic: two endpoint frequencies in both states give 32 structured
+frames, followed by/combined with 12 wavelength-angle-polarization intensity
+states, for 44 maximum sample frames/FOV. The six-frequency 96-frame path remains
+the v1 reference architecture and regression baseline.
+
 1. Prepare three dated, majority-clean reference captures for each material class.
 2. Project two orientations × six spatial frequencies × four phase steps.
 3. Capture a primary state and a registered, higher-SNR controlled-geometry state:

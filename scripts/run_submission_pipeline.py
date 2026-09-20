@@ -18,6 +18,7 @@ def main() -> int:
     run(sys.executable, "scripts/run_phase1.py")
     run(sys.executable, "scripts/run_final_validation.py")
     run(sys.executable, "scripts/run_v2_study.py")
+    run(sys.executable, "scripts/run_frame_optimization.py")
     run(sys.executable, "scripts/audit_proposal.py")
     run(sys.executable, "scripts/generate_proposal_figures.py")
     run(sys.executable, "scripts/build_submission_package.py")

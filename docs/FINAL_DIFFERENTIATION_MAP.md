@@ -11,11 +11,13 @@ frequencies, wavelengths, angles or polarization; clean/soiled references;
 confidence maps; source normalization; repeated inspection; abstention; or
 coverage planning individually.
 
-The only still-plausible differentiation is a narrow **assurance-system
-combination**: material-aware multi-reference confidence → model-bounded optical
-inference → explicit PASS/FLAG/UNKNOWN → controlled remeasurement → recorded
-visible coverage → false-clean adversarial audit. The scoped search did not find
-one record containing that complete cleaning-specific sequence. Absence from this
+The broad workflow is not differentiating: current product pages disclose
+material/surface baselines, maps, pass/fail, re-cleaning, coverage and records.
+The only still-plausible distinction is a narrow **clean-PASS proof obligation**:
+material-aware multi-reference confidence ∧ model-bounded evidence across required
+active states ∧ valid visible coverage; a failed premise becomes UNKNOWN and
+selects remeasurement, while release is audited for false-clean. The scoped search
+did not find one record containing that complete conjunction. Absence from this
 search does not establish novelty, non-obviousness or freedom to operate.
 
 ## Element-by-element map
@@ -39,6 +41,8 @@ search does not establish novelty, non-obviousness or freedom to operate.
 | Bound-preserving fusion of references and two controlled states | No exact cleaning-specific record found in scoped search | Combination-innovation candidate | Describe narrowly and conditionally |
 | False-clean adversarial registry tied to PASS/UNKNOWN/coverage | No exact product/patent combination found | Combination-innovation candidate | Strong project differentiation as validation discipline, not necessarily patentable |
 | 3×2×2 bands/angles/polarizations and numerical thresholds | This repository | Engineering implementation | Not a defensible novelty thesis |
+| Surface baseline → map → pass/fail → re-clean → logged record | iFactory vendor page; SITA FluoSpection; CIX100 | Existing product workflow | Do not claim the end-to-end workflow broadly |
+| Reference-integrity ∧ bounded multi-state evidence ∧ coverage validity required for clean PASS | No exact disclosure found in the inspected public material | Narrow differentiation hypothesis | Implemented distinction; legal novelty remains unproved |
 
 ## Closest overlap
 
@@ -59,6 +63,16 @@ inspection, even though that patent is not a cleaning workflow.
 teach reference normalization against source intensity and multiwavelength ratios
 for optical-window contamination. The v2 diversity cube may be useful, but its
 individual optics are not a clean novelty anchor.
+
+**Commercial products narrow the workflow claim further.** SITA publicly
+describes normalized whole-surface maps, zone limits, before/after comparison and
+reports. Evident CIX100 has reference-device self-checks, coverage, OK/NOK,
+early rejection and traceable reports. iFactory's marketing page describes
+surface-specific baselines, zone pass/fail maps, coverage completeness,
+re-cleaning alerts and timestamped records. Those statements are product/vendor
+descriptions, not independently verified performance, but they defeat a broad
+workflow-differentiation claim. The detailed chart is in
+`docs/WORKFLOW_DIFFERENTIATION_EVIDENCE.md`.
 
 ## Candidate combination claim — research wording only
 
@@ -92,7 +106,7 @@ claimed in dependent/non-English/unpublished records.
 - **Combination-innovation candidates:** the complete bounded assurance sequence
   and the false-clean/UNKNOWN/coverage audit discipline in a professional-cleaning
   workflow.
-- **Engineering only:** reference count, chosen bands/angles, thresholds, frame
-  scheduling, simulator, data schemas and pipeline.
+- **Engineering only:** reference count, chosen bands/angles, thresholds, the
+  44-frame schedule, simulator, data schemas and pipeline.
 - **Still unverified:** novelty, non-obviousness, patentability, legal status and
   freedom to operate. A professional claim chart remains mandatory.

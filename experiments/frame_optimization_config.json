@@ -1,0 +1,28 @@
+{
+  "evidence_type": "ASSUMPTION_DRIVEN_FRAME_ABLATION_ONLY",
+  "fixed_seed": 20260920,
+  "replicates": 6,
+  "structured_candidates": [
+    {"name": "s96_both_f6", "states": ["primary", "controlled"], "frequency_indices": [0, 1, 2, 3, 4, 5]},
+    {"name": "s48_both_f3", "states": ["primary", "controlled"], "frequency_indices": [0, 3, 5]},
+    {"name": "s32_both_f2", "states": ["primary", "controlled"], "frequency_indices": [0, 5]},
+    {"name": "s24_controlled_f3", "states": ["controlled"], "frequency_indices": [0, 3, 5]},
+    {"name": "s16_controlled_f2", "states": ["controlled"], "frequency_indices": [0, 5]},
+    {"name": "s24_primary_f3", "states": ["primary"], "frequency_indices": [0, 3, 5]},
+    {"name": "s16_primary_f2", "states": ["primary"], "frequency_indices": [0, 5]}
+  ],
+  "diversity_candidates": [
+    {"name": "d12_full", "feature_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]},
+    {"name": "d2_pol", "feature_indices": [6, 7]},
+    {"name": "d3_spectral", "feature_indices": [0, 4, 8]},
+    {"name": "d4_compact", "feature_indices": [0, 6, 7, 8]},
+    {"name": "d4_corners", "feature_indices": [0, 1, 10, 11]},
+    {"name": "d4_angle_pol", "feature_indices": [4, 5, 6, 7]}
+  ],
+  "frame_count_rule": "2 orientations * selected frequencies * 4 phases * acquired states + raw diversity states",
+  "limitations": [
+    "Frame counts are sequential sample exposures and exclude amortized clean-reference acquisition.",
+    "No camera readout overlap, polarization-on-chip simultaneity, exposure time, motion, or hardware switching latency is claimed.",
+    "Selection on this simulator can overfit its assumed optical constants and residue families."
+  ]
+}

@@ -12,6 +12,11 @@ area-overlap fraction `o`:
 
 `frames/view = states × orientations × frequencies × phases = 2×2×6×4 = 96`
 
+This remains the conservative v1 timing model. The v2.1 sample schedule is 44
+frames/FOV, but the table is not rescaled because wavelength/polarization
+switching, exposure and readout timing have not been measured; fewer frames do
+not by themselves establish a proportional field-time reduction.
+
 `total time = setup/reference + views × (frames×frame period + processing + reposition)`
 
 | Profile | FOV | Frame period | Process + move / view | Setup/reference |

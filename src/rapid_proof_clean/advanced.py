@@ -37,6 +37,22 @@ def collapse_signature(cube: np.ndarray, arm: str) -> np.ndarray:
     raise ValueError(f"unsupported arm: {arm}")
 
 
+def select_signature_features(
+    cube: np.ndarray, indices: tuple[int, ...] | list[int]
+) -> np.ndarray:
+    """Select flattened wavelength/angle/polarization states by index."""
+
+    if cube.shape[-5:-2] != (3, 2, 2):
+        raise ValueError("cube must end in (3 wavelengths,2 angles,2 polarizations,H,W)")
+    if len(indices) < 2 or len(set(indices)) != len(indices):
+        raise ValueError("at least two distinct feature indices are required")
+    if min(indices) < 0 or max(indices) >= 12:
+        raise ValueError("feature indices must be in [0, 11]")
+    leading = cube.shape[:-5]
+    flattened = cube.reshape(*leading, 12, *cube.shape[-2:])
+    return flattened[..., list(indices), :, :]
+
+
 def _reference_consensus(features: np.ndarray, cfg: DiversityConfig) -> tuple[np.ndarray, float]:
     count = len(features)
     log_features = np.log(np.maximum(features, 1e-9))
@@ -73,10 +89,33 @@ def infer_diversity(
         cfg = DiversityConfig()
     reference_features = collapse_signature(references, arm)
     sample_features = collapse_signature(sample, arm)
+    return _infer_features(reference_features, sample_features, cfg)
+
+
+def infer_diversity_features(
+    references: np.ndarray,
+    sample: np.ndarray,
+    indices: tuple[int, ...] | list[int],
+    cfg: DiversityConfig | None = None,
+) -> dict:
+    """Infer from an explicit compact subset of the 12 raw diversity states."""
+
+    if cfg is None:
+        cfg = DiversityConfig()
+    reference_features = select_signature_features(references, indices)
+    sample_features = select_signature_features(sample, indices)
+    return _infer_features(reference_features, sample_features, cfg)
+
+
+def _infer_features(
+    reference_features: np.ndarray,
+    sample_features: np.ndarray,
+    cfg: DiversityConfig,
+) -> dict:
     if reference_features.ndim != 4 or sample_features.ndim != 3:
         raise ValueError("unexpected feature shapes")
     selected, confidence = _reference_consensus(reference_features, cfg)
-    shape = sample.shape[-2:]
+    shape = sample_features.shape[-2:]
     if not len(selected):
         return {
             "status": np.full(shape, UNKNOWN, dtype=np.uint8),
