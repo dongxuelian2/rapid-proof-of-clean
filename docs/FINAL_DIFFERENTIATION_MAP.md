@@ -14,11 +14,12 @@ coverage planning individually.
 The broad workflow is not differentiating: current product pages disclose
 material/surface baselines, maps, pass/fail, re-cleaning, coverage and records.
 The only still-plausible distinction is a narrow **clean-PASS proof obligation**:
-material-aware multi-reference confidence ∧ model-bounded evidence across required
-active states ∧ valid visible coverage; a failed premise becomes UNKNOWN and
-selects remeasurement, while release is audited for false-clean. The scoped search
-did not find one record containing that complete conjunction. Absence from this
-search does not establish novelty, non-obviousness or freedom to operate.
+dated external anchor ∧ material-aware multi-reference qualification ∧ bounded
+12-state diversity and controlled three-frequency evidence ∧ valid visible
+coverage; a failed premise becomes UNKNOWN and selects only missing diagnostic
+evidence, while release is audited for false-clean. The scoped search did not find
+one record containing that complete conjunction. Absence from this search does
+not establish novelty, non-obviousness or freedom to operate.
 
 ## Element-by-element map
 
@@ -35,9 +36,12 @@ search does not establish novelty, non-obviousness or freedom to operate.
 | Surface confidence maps / statistical significance | [US7286218B2](https://patents.google.com/patent/US7286218B2/en) | Close inspection precedent | “Confidence” alone is not novel |
 | Repeated prescribed cleanliness measurement | [US6378386B1](https://patents.google.com/patent/US6378386B1/en) | Existing workflow precedent | Controlled repeatability is established broadly |
 | Optical cleaning recovery / before-after reference | WO2008029946A1; WO2012065952A1 | Close cleaning-specific precedent | Avoid broad remeasurement claims |
+| Clean-reference ratio plus iterative optical measurement/cleaning | [WO2025261682A1](https://patents.google.com/patent/WO2025261682A1/en) | Very close recent disclosure; pending PCT | Removes reference + measure + reclean as a broad distinction |
 | Explicit reject / UNKNOWN | Mature selective-classification concept | Existing general method | Safety behavior, not standalone novelty |
 | Coverage planning with uncertainty | Robotics/inspection literature, e.g. [coverage planning with uncertainty](https://arxiv.org/abs/2201.04310) | Existing adjacent method | Application integration only |
 | Three-reference majority consistency | Robust statistics plus inspection calibration art | Likely obvious component; no exact cleaning claim established | Treat as reliability engineering unless counsel finds a narrow claim |
+| Dated anchor against common-mode drift | Calibration/working-standard practice | Candidate implementation detail, not proven inventive | Necessary assurance control, not novelty by itself |
+| Early FLAG but full certificate for PASS | Sequential inspection and reject-option concepts | Candidate combination detail | Claim only the implemented workflow, never the general concept |
 | Bound-preserving fusion of references and two controlled states | No exact cleaning-specific record found in scoped search | Combination-innovation candidate | Describe narrowly and conditionally |
 | False-clean adversarial registry tied to PASS/UNKNOWN/coverage | No exact product/patent combination found | Combination-innovation candidate | Strong project differentiation as validation discipline, not necessarily patentable |
 | 3×2×2 bands/angles/polarizations and numerical thresholds | This repository | Engineering implementation | Not a defensible novelty thesis |

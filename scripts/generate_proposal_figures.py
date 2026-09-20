@@ -39,8 +39,8 @@ def workflow() -> None:
     ax.set_ylim(0, 5)
     ax.axis("off")
     boxes = [
-        (0.3, 2.0, "3 clean\nreferences", "#dbeafe"),
-        (2.5, 2.0, "96-frame\ntwo-state view", "#e0e7ff"),
+        (0.3, 2.0, "3 references +\ndated anchor", "#dbeafe"),
+        (2.5, 2.0, "adaptive 2→36\n(60 diagnostic)", "#e0e7ff"),
         (4.8, 2.0, "bounded transfer\ninference", "#ede9fe"),
         (7.2, 2.0, "PASS / FLAG /\nUNKNOWN", "#fef3c7"),
         (9.7, 2.0, "coverage log +\naction", "#dcfce7"),
@@ -87,46 +87,30 @@ def workflow() -> None:
 
 def failure_comparison() -> None:
     data = json.loads(
-        (ROOT / "experiments" / "results" / "phase1_results.json").read_text(encoding="utf-8")
-    )
-    failures = [
-        "dirty_reference",
-        "uniform_absorber",
-        "optically_invisible_residue",
-        "negative_blur_cancellation",
-    ]
-
-    def value(method: str, failure: str) -> float:
-        row = next(
-            item
-            for item in data["failure_aggregate"]
-            if item["method"] == method and item["failure_mode"] == failure
+        (ROOT / "experiments" / "results" / "final_research_results.json").read_text(
+            encoding="utf-8"
         )
-        return 100 * row["false_clean_rate"]
-
-    v0 = [value("v0_single_reference", item) for item in failures]
-    v1 = [value("v1_retained", item) for item in failures]
-    labels = [
-        "Dirty\nreference",
-        "Uniform\nabsorber",
-        "Optically\ninvisible",
-        "Geometry\ncancellation",
-    ]
+    )
+    selected = {
+        row["policy"]: 100 * row["observable_dirty_false_clean_rate"]
+        for row in data["summary"]
+    }
+    policies = ["fast_20", "fixed_v2_1", "adaptive_standard", "conservative_60"]
+    labels = ["Fast 20", "Fixed v2.1\n44 max", "Adaptive v2.2\n36 PASS", "Conservative\n60"]
     fig, ax = plt.subplots(figsize=(9, 5))
-    x = range(len(failures))
-    ax.bar([i - 0.19 for i in x], v0, width=0.38, label="v0", color="#94a3b8")
-    ax.bar([i + 0.19 for i in x], v1, width=0.38, label="retained v1", color="#2563eb")
-    ax.set_xticks(list(x), labels)
-    ax.set_ylim(0, 112)
-    ax.set_ylabel("Proxy-PASS pixels in positive construction (%)")
-    ax.set_title("Adversarial false-clean constructions — SYNTHETIC ONLY", weight="bold")
-    ax.legend(frameon=False)
+    values = [selected[policy] for policy in policies]
+    colors = ["#dc2626", "#f59e0b", "#2563eb", "#64748b"]
+    bars = ax.bar(labels, values, color=colors)
+    ax.bar_label(bars, labels=[f"{value:.2f}%" for value in values], padding=3)
+    ax.set_ylim(0, 14)
+    ax.set_ylabel("Observable-dirty FOV false-clean (%)")
+    ax.set_title("Domain-shift policy comparison — SYNTHETIC ONLY", weight="bold")
     ax.grid(axis="y", alpha=0.25)
     ax.text(
         1.5,
-        -26,
-        "Fixed toy-model scenes; pixels are descriptive, not independent trials.\n"
-        "100% remains for an optically invisible construction.",
+        -3.0,
+        "Constructed response/morphology distribution; not field prevalence.\n"
+        "Observation-matched residue remains 100% false-clean for every policy.",
         ha="center",
         fontsize=9,
     )
@@ -134,47 +118,43 @@ def failure_comparison() -> None:
 
 
 def coverage_time() -> None:
-    with (ROOT / "experiments" / "results" / "coverage_time_model.csv").open(
+    with (ROOT / "experiments" / "results" / "adaptive_coverage_time_model.csv").open(
         encoding="utf-8"
     ) as handle:
         rows = list(csv.DictReader(handle))
-    targets = [
-        "work_surface_1m2",
-        "high_touch_set_4m2",
-        "prep_zone_5m2",
-        "small_room_targets_12m2",
-        "large_room_targets_25m2",
-    ]
-    labels = [
-        "1 m²\nwork",
-        "4 m²\nhigh-touch",
-        "5 m²\nprep",
-        "12 m²\nsmall room",
-        "25 m²\nlarge room",
-    ]
-    colors = {"optimistic": "#16a34a", "conservative": "#2563eb", "stress": "#dc2626"}
+    targets = ["1m2", "5m2", "12m2", "25m2"]
+    labels = ["1 m²", "5 m²", "12 m²", "25 m²"]
+    budgets = {
+        "expected_valid_synthetic_mix": ("synthetic-mix mean", "#16a34a"),
+        "clean_pass_certificate": ("clean PASS: 36 frames", "#2563eb"),
+        "p95_valid_synthetic_mix": ("p95: 60 frames", "#dc2626"),
+    }
     fig, ax = plt.subplots(figsize=(9, 5.4))
-    for profile in colors:
+    for budget, (label, color) in budgets.items():
         values = [
             float(
-                next(row for row in rows if row["profile"] == profile and row["target"] == target)[
-                    "total_minutes"
-                ]
+                next(
+                    row
+                    for row in rows
+                    if row["profile"] == "conservative"
+                    and row["target"] == target
+                    and row["budget_label"] == budget
+                )["total_minutes"]
             )
             for target in targets
         ]
-        ax.plot(labels, values, marker="o", linewidth=2.2, label=profile, color=colors[profile])
+        ax.plot(labels, values, marker="o", linewidth=2.2, label=label, color=color)
     ax.axhline(30, linestyle="--", color="#111827", linewidth=1.5, label="30-minute objective")
     ax.set_ylabel("Modeled total time (minutes)")
     ax.set_title("Coverage/time scenarios — ASSUMPTIONS, NOT MEASUREMENTS", weight="bold")
-    ax.set_ylim(0, 190)
+    ax.set_ylim(0, 35)
     ax.grid(axis="y", alpha=0.25)
     ax.legend(frameon=False, ncol=2)
     ax.text(
-        2,
-        -38,
-        "Visible target-surface area; inaccessible fractions and reposition overhead included.\n"
-        "Hardware timing, rescans and operator interruptions are unvalidated.",
+        1.5,
+        -7,
+        "Conservative input profile; visible target area and inaccessible fraction included.\n"
+        "Frame switching, hardware timing and operator performance are unmeasured.",
         ha="center",
         fontsize=9,
     )

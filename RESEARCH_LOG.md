@@ -172,3 +172,41 @@ form-aligned submission package without inventing physical results.
 Final classification is
 `SUBMISSION_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION`. Human agreement,
 eligibility, experience and submission actions remain outside the software agent.
+
+## 2026-09-20 — Final adaptive and domain-shift research run
+
+### Goal
+
+Compress the v2.1 fixed 44-frame workflow without worsening its false-clean result,
+attack shared-model assumptions, strengthen common-mode reference handling and
+finish the technical differentiation case.
+
+### Actions
+
+- froze the v2.1 baseline with tag `v2.1-fixed-budget`;
+- implemented asymmetric sequential acquisition with explicit PASS certificates;
+- added graph/leave-one-out reference qualification against a dated anchor;
+- built an evaluation operator with arbitrary state response, alternative
+  morphologies/noise, missing data, coverage and reference corruption;
+- ran five acquisition policies, a 400-case adversarial search and FOV bootstrap;
+- added adaptive coverage budgets, formal observability limit and coupon amendments;
+- audited close patent families/claims, including WO2025261682A1;
+- rewrote the proposal and completed three 20-objection red-team rounds.
+
+### Findings
+
+- v2.2 preserves v2.1's 5.568% nonmatched pixel false-clean in-model while reducing
+  normal clean PASS from 44 to 36 frames;
+- domain-shift observable-dirty FOV false-clean changes from 11.667% fixed v2.1 to
+  1.111% adaptive v2.2, with UNKNOWN increasing from 12.778% to 22.222%;
+- matched-invisible remains 100% false-clean and 136/400 searched cases pass,
+  mostly through <5% spatial support;
+- common-mode reference drift becomes UNKNOWN only when an independent anchor
+  differs; shared anchor error remains unidentifiable;
+- broad workflow novelty is contradicted; only a narrow assurance conjunction is
+  a candidate distinction, with novelty/FTO unverified.
+
+### Decision
+
+Freeze v2.2 and stop computational expansion. The next evidence gate is the
+preregistered physical coupon study; no simulation result is a physical claim.

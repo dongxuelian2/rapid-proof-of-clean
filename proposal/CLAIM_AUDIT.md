@@ -17,6 +17,12 @@
 | UNKNOWN routes to reacquire/escalate | workflow design | architecture/workflow | proposed safety behavior | validated usability |
 | current maturity is TRL 2 | reasoned self-assessment | NASA terminology; evidence ledger | concept-stage estimate | external certification |
 | no exact full workflow match found | scoped search result | prior-art matrix | “not confirmed in this search” | novelty or freedom to operate |
+| v2.2 preserves v2.1 in-model nonmatched false-clean | retained simulator regression | `final_research_results.json` | both 5.568% pixel false-clean; synthetic only | physical non-inferiority |
+| v2.2 lowers domain-shift FOV false-clean | different synthetic response operator | final benchmark | 11.667% fixed vs 1.111% adaptive on constructed suite | expected field performance |
+| normal proxy PASS uses 36 frames | implemented sequential policy | `final_model_config.json`; tests | sample-frame certificate behavior | measured acquisition time |
+| matched-invisible remains 100% false-clean | information-theoretic control | final benchmark; observability note | fundamental retained-state limit | prevalence of invisible residue |
+| common-mode live-reference drift becomes UNKNOWN when anchor differs | synthetic reference stress | final benchmark | tested construction only | independently clean anchor guarantee |
+| recent art discloses clean-reference optical measurement and iterative cleaning | scoped patent review | WO2025261682A1 | removes broad differentiation claim | legal claim interpretation or FTO |
 
 ## Language check
 

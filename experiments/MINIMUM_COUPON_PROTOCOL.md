@@ -1,5 +1,18 @@
 # Minimum physical coupon protocol
 
+## Final architecture requirements
+
+Capture the 2→4→12→28→36-frame sequence and retain raw frames even after an early
+FLAG for the first calibration cohort. Include the optional primary diagnostic so
+the 60-frame branch can be audited. Each session needs three independently handled
+live references plus a dated anchor with independent acceptance evidence. Coupon
+labels must include material lot, finish/roughness, residue family, loading or
+thickness, stain area/shape, cleaning state, day and operator.
+
+Add a preregistered stain-support sweep spanning below and above 5% of the FOV and
+the optical PSF boundary. Small-support false release is now a co-primary risk, not
+an exploratory result.
+
 **Status: designed, not executed.** No physical images or instrument data were
 found in the repository on 2026-09-20.
 

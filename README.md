@@ -5,14 +5,15 @@ Research and submission workspace for the Rapid Proof of Clean innovation challe
 ## Current status
 
 ```text
-SIMULATION_V2_CANDIDATE_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION
-TRL 2 — physically motivated simulation candidate complete; no physical experiment executed.
+FINAL_V2_2_COMPUTATIONAL_CANDIDATE_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION
+TRL 2 — adaptive synthetic candidate complete; no physical experiment executed.
 ```
 
 The active direction is reference-guarded multi-frequency active-reflectance
-screening with bounded inference, explicit abstention, coverage accounting and a
-remeasurement path. Candidate v2 adds angle, wavelength and polarization diversity.
-All performance evidence remains synthetic or assumption-driven.
+screening with bounded inference, dated-anchor reference qualification, explicit
+abstention, coverage accounting and sequential acquisition. Candidate v2.2 uses a
+36-frame clean-PASS certificate and a 60-frame diagnostic tail. All performance
+evidence remains synthetic or assumption-driven.
 
 ## Continuation entry
 
@@ -50,9 +51,12 @@ The bootstrap script uses the installed `uv` tool when available, creates `.venv
 - `docs/ADVANCED_SENSING_STUDY.md` — v2 architecture and negative results.
 - `docs/REALISTIC_SIMULATION_REPORT.md` — joint-model v1→v2 benchmark.
 - `docs/FINAL_DIFFERENTIATION_MAP.md` — final prior-art separation.
+- `docs/FINAL_RESEARCH_REPORT.md` — final architecture, benchmark and stop decision.
+- `docs/ADAPTIVE_ACQUISITION.md` — selected policy and rejected frame schedules.
+- `docs/OBSERVABILITY_LIMIT.md` — formal limit of retained optical evidence.
 - `challenge/` — challenge intake metadata and rights-cleared material references.
 - `research/` — source and claim ledgers; no solution literature is added in Phase 0.
-- `proposal/` — form-aligned final proposal, claim audit and two-round red team.
+- `proposal/` — form-aligned final proposal, claim audit and three-round red team.
 - `prior_art/` — literature/patent/product audit and structured matrix.
 - `figures/` — generated proposal figures in PNG and SVG.
 - `submission_package/` — curated files for human review and form submission.
@@ -70,5 +74,5 @@ generated submission artifact with:
 ```
 
 The pipeline reruns the frozen baseline, Phase 1 benchmark, robustness/coverage
-models, realistic v2 study, proposal audit, figures, curated package, repository
-verification and tests.
+models, realistic v2 study, domain-shift/adversarial audit, proposal audit,
+figures, curated package, repository verification and tests.

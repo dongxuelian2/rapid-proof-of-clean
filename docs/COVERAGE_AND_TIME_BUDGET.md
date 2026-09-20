@@ -12,10 +12,10 @@ area-overlap fraction `o`:
 
 `frames/view = states × orientations × frequencies × phases = 2×2×6×4 = 96`
 
-This remains the conservative v1 timing model. The v2.1 sample schedule is 44
-frames/FOV, but the table is not rescaled because wavelength/polarization
-switching, exposure and readout timing have not been measured; fewer frames do
-not by themselves establish a proportional field-time reduction.
+This remains the frozen conservative v1 timing model. The final v2.2 schedule is
+also evaluated explicitly in `adaptive_coverage_time_model.csv`, while preserving
+the warning that switching, exposure, readout and operator timing are unmeasured.
+Fewer simulated frames do not establish a proportional field-time reduction.
 
 `total time = setup/reference + views × (frames×frame period + processing + reposition)`
 
@@ -37,3 +37,21 @@ The 30-minute objective is plausible for a bounded target set under the
 conservative assumptions, but not for the 25 m² case and not under stress. The
 model excludes rescans, cleaning time, operator interruptions, network transfer
 and orthogonal testing. A full-room “single pass” is not demonstrated.
+
+## Final adaptive budget
+
+The final policy has a 36-frame normal clean-PASS certificate, early FLAG exits
+and a 60-frame diagnostic tail. In the artificial valid-case mix its mean was
+22.9 frames and p95 was 60. Applying those statistics to the same conservative
+timing assumptions gives:
+
+| Target | Expected synthetic mix | Clean PASS (36) | p95 / worst (60) |
+|---|---:|---:|---:|
+| 1 m² | 3.35 min | 3.47 min | 3.70 min |
+| 5 m² | 7.72 min | 8.24 min | 9.20 min |
+| 12 m² | 14.78 min | 15.95 min | 18.10 min |
+| 25 m² | 24.94 min | 27.05 min | 30.90 min |
+
+“Expected” reflects the constructed benchmark mix, not field prevalence. The
+25 m² p95/worst case still misses 30 minutes. Physical timing and operator
+coverage studies remain gating evidence.

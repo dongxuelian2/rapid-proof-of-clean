@@ -1,5 +1,21 @@
 # Preregistration for the first coupon study
 
+## Final v2.2 amendment (before any physical data collection)
+
+The frozen acquisition candidate is `experiments/final_model_config.json`. Proxy
+PASS requires a qualified dated anchor, valid visible coverage, all 12 diversity
+states and controlled structured light at spatial-frequency indices `[0,3,5]`.
+The normal clean certificate is 36 sample frames. Two/four/twelve/twenty-eight
+frame stages may stop only for FLAG. A primary three-frequency diagnostic may
+extend a view to 60 frames; missing required evidence forces UNKNOWN.
+
+Primary analysis units are coupons/FOVs, not pixels. Report false-clean,
+false-FLAG, UNKNOWN, usable coverage and frame/time distributions with FOV-level
+intervals. Mandatory strata include exact/near optical matching, middle-frequency-
+only response controls, stain-size/support sweeps, independent/common-mode
+reference corruption, aged anchors, registration and raw sensor noise. Thresholds
+may not be changed after unblinding without declaring a new study.
+
 Version: 1.0, 2026-09-20. **Not yet executed or registered externally.** Amendments
 must be dated before data collection.
 

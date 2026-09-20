@@ -23,10 +23,15 @@ Do not submit until every required human item is checked.
 
 - [ ] Confirm no physical experiment has been performed, or replace that statement
       only with auditable new data and rerun the claim audit.
-- [ ] Verify synthetic metrics against `experiments/results/phase1_results.json`.
-- [ ] Verify timing numbers against `coverage_time_model.csv`; do not call them measured.
+- [ ] Verify final synthetic metrics against
+      `experiments/results/final_research_results.json` and historical metrics
+      against the Phase 1/v2.1 artifacts.
+- [ ] Verify timing numbers against `adaptive_coverage_time_model.csv`; do not call
+      them measured or assume frame count maps proportionally to field time.
 - [ ] Keep optically invisible residue, common-mode reference corruption,
-      material scope and inaccessible coverage prominent.
+      small-support residue, material scope and inaccessible coverage prominent.
+- [ ] Obtain a professional claim chart/FTO review, including WO2025261682A1 and
+      the national families listed in `REFERENCES_AND_PRIOR_ART.md`.
 - [ ] Confirm “proxy PASS” is not described as hygiene, safety or sterility.
 - [ ] Have an optical/metrology reviewer challenge the model and a cleaning-domain
       reviewer challenge the workflow.

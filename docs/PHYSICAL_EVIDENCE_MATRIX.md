@@ -27,16 +27,29 @@ modulation/scatter observable even while it changes another optical state. A
 residue exactly matching clean in every retained state remains impossible to
 distinguish optically.
 
+A second stainless-steel study used 400–1000 nm hyperspectral data for six
+dilutions of spinach and potato juice and reported 0.94 validation accuracy for
+both residue families. This supports spectral observability for those prepared
+droplets, while also showing that reported classifier accuracy is not a mass LOD
+or a guarantee under new finishes ([Aboonajmi et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC8122335/),
+S41). A separate fluorescence system reported minimum detected blob diameters of
+0.13 mm on stainless and 0.21 mm on plastic; that modality is outside the retained
+elastic-reflectance architecture, but the material-dependent spatial boundary is
+direct warning evidence for the new small-support failure class (S42).
+
 ## Residue × material × observable evidence
 
 | Residue / morphology | Material | Measured or supported observable | Quantitative anchor | Evidence strength for this project | Consequence |
 |---|---|---|---|---|---|
 | Poultry feces, ingesta, blood, meat, fat, skin fluids; wet and dry | Stainless steel | Multispectral reflectance ratios | Wet 1:100 dilution: R895/R469, 94.0%; dry 1:100: 527/580 nm, 99.7% in the source dataset | Direct material/residue family; different optics and classifier | Wavelength diversity adds genuine information; it is not a threshold retune |
+| Spinach and potato juice, six dilutions | Stainless steel | 400–1000 nm hyperspectral reflectance | CNN validation accuracy 0.94 for both residue families in the study | Direct surface/residue evidence; model and split are study-specific | Confirms spectral contrast can persist across dilution, not a transferable LOD |
 | Beef, chicken, apple, mango, skim milk before/after detergent cleaning | 304 stainless steel | UV-visible illuminated area; strong residue/material/wavelength interaction | 365–490 nm tested; preferred bands differed by residue, and 490 nm often exposed surface structure rather than residue | Direct, but illumination includes fluorescence/visible response outside the retained purely elastic model | A single wavelength is fragile; material-conditioned bands are required |
 | Same food residues | Fibre-reinforced plastic | UV-visible response | 365–490 nm; preferred band groups differed from stainless and aluminium | Adjacent to plastic/HDPE, not the same polymer/finish | Plastic cannot inherit a steel calibration; background structure can dominate |
 | Peanut-butter soil from fouled detergent suspension | Stainless steel vs HDPE | Surface coverage, morphology, epifluorescence, FTIR/EDX; roughness and wettability | Detergent cases: stainless 3–21% coverage vs HDPE 0.3–1.3%; roughness and contact angle differed substantially | Direct residue deposition evidence; optical channel differs | Residue support and morphology are material-dependent; uniform-film simulation is inadequate |
+| Spinach/olive-oil fluorescent blobs | Stainless steel vs plastic | UV/visible fluorescence imaging and segmentation | Reported minimum blob diameter 0.13 mm on steel vs 0.21 mm on plastic | Direct spatial/material evidence; different excitation/observable | Pixel support and background material change the detection boundary; no universal stain-size threshold |
 | Latent fingerprint / sebum-like ridge residue | Plastic, stainless steel and other common objects | Specular reflection and polarization | Non-contact recovered images were reported comparable to existing methods in cases | Direct optical mechanism; no project LOD | Polarization can expose residue invisible to ordinary intensity, but only if it changes polarization |
 | Transparent water | Industrial surfaces (conference samples) | Four-channel polarization under RGB dome illumination | Demonstrated as a route for transparent-liquid inspection; abstract gives no transferable error/LOD | Direct mechanism, incomplete quantitative evidence | Polarization is promising for water films, not guaranteed for all films |
+| Crude and vegetable oil on water | Liquid background | Degree of linear polarization versus viewing geometry | Peak linear polarization 40–70% crude and 20–50% vegetable oil in the source study | Direct polarimetric contrast, but wrong substrate/application | Polarization can add information; its magnitude is strongly angle-dependent and cannot be transferred to solid coupons |
 | Dust/soiling | Glass mirror | Specular reflectance and area distribution | 22-day soiling: mean reflectance 52.3% vs 95.2% cleaned at 656 nm, 15°, 12.5 mrad; 91.4% vs 0.001% of area below 70% | Direct and quantitative, but outdoor dust is easier than molecular film | Particles/rough deposits should be among the easiest classes for active reflectance |
 | Airborne soiling | Glass | Total reflectance, transmittance and diffuse transmittance/haze | Study correlates modern-glass soiling with optical and chemical measures | Direct material; environment differs | Reflection plus haze/transmission can reveal particles, but transmission is not always accessible |
 | Water, silicone oil, aromatic/aliphatic hydrocarbon films | Reflective stainless steel at cryogenic temperature | Visible scatter, reflectance and IR emissivity vs film thickness | Visible scatter little changed below ~2 µm; rapid rise beyond 2–3 µm over 0–20 µm films | Direct substrate/film/scatter evidence; temperature and surface differ | Thin clear films are a hard v1 case; scattering alone cannot support broad sensitivity claims |
@@ -95,3 +108,6 @@ Its numbers cannot replace the coupon protocol.
 - [USGS, oil-smear thin-film interference on glass](https://www.usgs.gov/publications/measured-reflectance-suppressed-thin-film-interference-crude-oil-smeared-glass)
 - [Dirty Glass BRDF/BTDF model](https://diglib.eg.org/items/2211d001-3ee3-4228-aa34-ccf479ef29ad)
 - [Stainless/HDPE soil adsorption study](https://doi.org/10.1016/j.fbp.2026.03.023)
+- [VNIR spinach/potato residue study](https://pmc.ncbi.nlm.nih.gov/articles/PMC8122335/)
+- [Handheld fluorescence system and material-dependent blob size](https://pmc.ncbi.nlm.nih.gov/articles/PMC8588002/)
+- [Oil/water polarimetric discrimination](https://opg.optica.org/abstract.cfm?uri=hise-2015-HW2B.4)

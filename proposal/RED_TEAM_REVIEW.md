@@ -1,82 +1,143 @@
-# Red-team review
+# Final three-round red-team review
 
-## Round 1 — challenge-fit and scientific attack on proposal v1
+Updated 2026-09-20. Each round contains at least 20 hard objections. “Change”
+records the resulting proposal or implementation action; it is not a rebuttal by
+assertion.
 
-1. **Where is the physical evidence?** None. Make “not executed” prominent and
-   keep the solution at TRL 2.
-2. **Does PASS mean clean?** No. Rename it operationally as “proxy PASS” and state
-   its narrow meaning every time metrics appear.
-3. **Why would residue change modulation transfer?** Literature supports the
-   mechanism for some contamination/defect classes, but each surface/residue pair
-   requires a coupon dose-response study.
-4. **Can invisible residue pass?** Yes; the synthetic adversarial case passes 100%.
-   Preserve this result and require orthogonal testing.
-5. **Can three dirty references agree?** Yes. Consensus protects against one
-   discordant reference, not common-mode corruption.
-6. **Is the gain guard a residue detector?** No. It flags attenuation outside a
-   bounded acquisition-gain assumption and can false-flag exposure drift.
-7. **Is the second state real?** It is implemented in simulation only. Hardware
-   registration and the `|b|≤0.01` bound are major unvalidated assumptions.
-8. **Are pixels independent trials?** No. Report scene/coupon units and avoid
-   binomial claims from pixel counts.
-9. **Is 0% false-clean a performance claim?** Only within the standard toy-model
-   benchmark; pair it with the invisible-case failure and no real sensitivity.
-10. **Is under 30 minutes demonstrated?** No. It is a transparent input model.
-11. **Does 12 m² mean full-room coverage?** No. It is visible target-surface area;
-    inaccessible fractions are explicitly excluded.
-12. **Why not ATP?** The proposal offers non-contact area screening; it does not
-    provide ATP's biochemical proxy and should complement rather than “replace.”
-13. **Is the solution differentiated from known structured light?** Only at the
-    assurance-workflow combination level; the optical principle is prior art.
-14. **Is novelty established?** No. Use “candidate differentiation,” keep FTO
-    unverified, and recommend counsel.
-15. **Does the minimal BOM satisfy v1 assumptions?** Not necessarily. Label it a
-    concept rig and separate the field-grade 12-bit configuration.
-16. **What happens with missing frames?** Entire view becomes UNKNOWN and is
-    reacquired; never silently fit fewer frequencies without revalidation.
-17. **What about scratches and wear?** They can flag like residue. The system is an
-    anomaly screen and cannot identify cause.
-18. **What about transparent, matte, curved or textured surfaces?** Unsupported
-    until separately calibrated; material-class refusal is required.
-19. **Could UNKNOWN make the system unusable?** Yes. Report coverage and UNKNOWN
-    rate as primary operational endpoints.
-20. **What is the action threshold?** A synthetic `q=0.5 pixel²`; it has no
-    physical meaning until calibrated and must not be converted to mass/CFU.
-21. **Could AI-policy wording disqualify the entry?** Human authorship, technical
-    decisions, source review and agreement acceptance must be documented.
-22. **Who owns background IP?** Unknown from the public page; the participant must
-    review the logged-in agreement and obtain advice if needed.
-23. **What is the comparator?** Use ATP/chemical/visual/microbiology according to
-    the decision, but do not treat any single proxy as universal ground truth.
-24. **What would falsify the project?** No reproducible physical response, excessive
-    false-clean, common-mode reference failure, or measured timing beyond scope.
-25. **What should the final pitch emphasize?** Honest bounded decision control,
-    area workflow and a concrete validation plan—not a breakthrough sensor claim.
+## Round 1 — skeptical optical scientist
 
-Round-1 revisions: narrowed PASS language; elevated invisibility and reference
-failure; separated modeled time from measured performance; replaced novelty and
-ATP-replacement language; added stop criteria and human-only fields.
+1. **No physical signal exists.** Evidence: none in-project. Change: TRL 2 and
+   “no physical experiment” are explicit.
+2. **The design and test simulators share assumptions.** Evidence: earlier tests
+   reused residue optics. Change: added arbitrary observation-space response,
+   morphology and noise operators; remaining clean-background coupling is stated.
+3. **Endpoint frequencies can miss a curved response.** Evidence: 20/20
+   midband-only FOVs passed v2.1. Change: middle frequency required for PASS.
+4. **Twenty frames delete information.** Evidence: 12.222% domain false-clean.
+   Change: fast-20 rejected and archived.
+5. **More frames can merely retune thresholds.** Evidence: middle frequency sees
+   an otherwise unobserved dimension. Change: retain only this information-adding
+   state; label other threshold-only ideas negative.
+6. **Pixel counts inflate confidence.** Evidence: pixels share FOV nuisances.
+   Change: FOV is the bootstrap/resampling unit.
+7. **The reported CI is distribution-specific.** Evidence: constructed scenarios.
+   Change: call it a benchmark interval, never field uncertainty.
+8. **Clean false-FLAG is cherry-picked.** Evidence: impulsive-noise clean stress
+   false-FLAGed. Change: report nuisance group separately instead of folding it
+   into nominal-clean results.
+9. **Uniform attenuation is confounded with exposure.** Evidence: gain guard uses
+   a bounded acquisition assumption. Change: keep it as a guarded anomaly, not a
+   residue identifier.
+10. **Registration test is unrealistic.** Evidence: shared clean renderer and
+    integer roll. Change: mark its pass non-probative and require physical texture.
+11. **A clear film can be below scatter sensitivity.** Evidence: NASA thin-film
+    data. Change: elevate sub-2 µm clear film as a primary negative control.
+12. **Polarization depends strongly on angle.** Evidence: oil DOLP varies with
+    viewing geometry. Change: require locked pose and angle sweep in coupons.
+13. **Material transfer is unsupported.** Evidence: steel/plastic response and
+    blob-size differences. Change: claims are stratified by material and finish.
+14. **Three agreeing references may all be dirty.** Evidence: common-mode
+    construction. Change: require dated external anchor.
+15. **The anchor can also be dirty.** Evidence: identifiability theorem. Change:
+    require independent certification and state this residual failure explicitly.
+16. **Reference thresholds are arbitrary.** Evidence: synthetic values only.
+    Change: label them preregistered starting values requiring measured calibration.
+17. **Matched residue remains invisible.** Evidence: 100% PASS control. Change:
+    formal observability theorem and mandatory orthogonal route.
+18. **Small stains exploit FOV aggregation.** Evidence: adversarial search found
+    strong cases below 5% support. Change: expose spatial support as top risk and
+    freeze regression cases.
+19. **The optional 60-frame state can rescue a bad model by chance.** Evidence:
+    it slightly changes synthetic false-clean. Change: treat it as diagnostic;
+    clean release already requires the 36-frame certificate.
+20. **No more simulation will prove feasibility.** Evidence: main uncertainty is
+    real contrast/noise. Change: stop computational tuning and hand off to coupons.
 
-## Round 2 — final-draft verification
+## Round 2 — industrial cleaning / operations reviewer
 
-1. Every performance number is labeled synthetic or assumption-driven: **pass**.
-2. No microbial, sterility, species, strain or real LOD claim: **pass**.
-3. Physical experiment status is explicit: **pass**.
-4. Closest structured-light, patent, product and industrial precedents disclosed:
-   **pass**, with FTO still open.
-5. 30-minute claim is conditional and includes failing scenarios: **pass**.
-6. UNKNOWN and inaccessible coverage are first-class outputs: **pass**.
-7. Hardware cost is a range/assumption, not a quote: **pass**.
-8. Experience and participation are not invented: **pass; human completion needed**.
-9. Logged-in agreement/eligibility/IP/AI decisions are not automated: **pass;
-   human completion needed**.
-10. Proposal can stand without attachments: **pass**, while attachments supply
-    audit detail.
+1. **PASS will be read as hygienically clean.** Change: every operator-facing
+   definition says “optical proxy PASS,” not sterility or microbial safety.
+2. **ATP comparison is misleading.** Change: describe complementary area screen
+   versus biochemical point proxy; no replacement claim.
+3. **References create hidden consumables.** Change: disclose preparation,
+   storage, lifecycle and replacement burden.
+4. **Anchor setup could dominate field time.** Change: frame counts explicitly
+   exclude amortized reference acquisition; timing study must include it.
+5. **Frame count is not elapsed time.** Change: all time figures remain unmeasured
+   input models with switching/readout caveat.
+6. **The average frame count is prevalence-sensitive.** Change: report nominal
+   clean 36, artificial-mix mean, p95 and max separately.
+7. **The 60-frame tail misses the target.** Evidence: 25 m² models 30.90 min.
+   Change: disclose failure rather than headline only the mean.
+8. **Whole-room coverage is implied.** Change: use “visible target-surface set”
+   and report inaccessible fraction.
+9. **Curved/occluded sites are common.** Change: unsupported or invisible regions
+   are UNKNOWN and require another method.
+10. **Repeated flags may be scratches.** Change: system is an anomaly screen;
+    persistent flags trigger investigation, not a residue diagnosis.
+11. **Moist clean surfaces may flag.** Change: include water/cleaning-condition
+    strata and workflow-specific acceptance timing in coupon design.
+12. **Operator skipping can produce false release.** Change: coverage validity is
+    a PASS predicate, not a report-only metric.
+13. **Missing frames could be ignored.** Change: failed required evidence cannot
+    form a certificate.
+14. **Reference mix-up is likely.** Change: immutable IDs, material/finish scope
+    and chain-of-custody are specified.
+15. **A 95% pixel rule tolerates too much dirt.** Evidence: adversarial support
+    failures. Change: call the value provisional and make stain-size sweeps a gate.
+16. **False FLAG harms usability.** Evidence: impulsive noise stress. Change:
+    false-FLAG and UNKNOWN are primary endpoints, not hidden behind accuracy.
+17. **No field-grade enclosure is designed.** Change: BOM remains a planning range;
+    cleanability and ingress are Gate 3 work.
+18. **No operator study exists.** Change: time and usability are explicit pilot
+    endpoints.
+19. **Ground truth varies by application.** Change: comparator is chosen per
+    decision context, never one universal proxy.
+20. **Failure criteria are vague.** Change: no reproducible contrast, excessive
+    false-clean, uncontrolled references or excessive time narrows/stops claims.
 
-## Non-expert read
+## Round 3 — competitor / patent and submission reviewer
 
-A cleaning manager should understand the concept as a camera-and-pattern scanner
-that finds some surface changes, refuses uncertain views, and creates a coverage
-record. Potentially confusing terms (`q`, BRDF, interval propagation) were kept in
-the scientific section and translated elsewhere. The most important plain-language
-warning is repeated: a green optical result is not proof of microbial safety.
+1. **Structured light is old.** Change: no novelty claim for the sensing principle.
+2. **Perpendicular fringes are old.** Change: classify as engineering.
+3. **Multi-frequency is old.** Change: justify middle frequency by benchmark only.
+4. **Wavelength/angle/polarization diversity is old.** Change: no component claim.
+5. **Clean references are old.** Change: differentiation is not “uses a reference.”
+6. **Material-aware lighting is patented.** Evidence: US8229204B2. Change: disclose
+   direct overlap and require a claim chart.
+7. **Threshold/reclean is patented.** Evidence: WO2012065952 family. Change: avoid
+   broad workflow novelty.
+8. **Optical marker cleaning checks exist.** Evidence: US9839712B2/US8519360B2.
+   Change: distinguish native-response scope without disparaging marker systems.
+9. **Coverage-based CLEAN exists.** Evidence: US11615694B2 description. Change:
+   coverage alone is not differentiated.
+10. **Confidence maps exist.** Evidence: US7286218B2. Change: bounded confidence is
+    a safety implementation, not a novelty claim.
+11. **Reference normalization exists.** Evidence: EP0903572/US7948617. Change:
+    do not claim source normalization.
+12. **Multiwavelength contamination ratios exist.** Evidence: US7948617. Change:
+    do not claim spectral ratios broadly.
+13. **Recent ASML art has clean-reference ratio and iterative cleaning.** Evidence:
+    WO2025261682A1. Change: remove “reference + remeasure” differentiation.
+14. **Commercial full-field fluorescence maps exist.** Evidence: F-Camera/SITA.
+    Change: position as elastic-reflectance research alternative, not first imaging.
+15. **Commercial technical-cleanliness audit trails exist.** Evidence: CIX100.
+    Change: records/OK-NOK are not differentiators.
+16. **Vendor vision pages claim baselines and reclean alerts.** Evidence: iFactory.
+    Change: broad end-to-end workflow novelty is contradicted.
+17. **UNKNOWN is standard selective classification.** Change: do not claim reject
+    option alone.
+18. **The residual conjunction may be obvious.** Change: label it a candidate
+    technical distinction, not patentability.
+19. **Legal status data are unreliable.** Change: database statuses are explicitly
+    unverified leads; counsel must check registers and prosecution histories.
+20. **The submission can overstate generated work.** Change: participant identity,
+    experience, eligibility, agreement and AI disclosure remain human-only fields.
+
+## Final disposition
+
+The review changed the architecture (middle-frequency PASS requirement and dated
+anchor), rejected the 20-frame candidate, changed metrics to FOV-level intervals,
+created permanent adversarial regressions, rewrote the proposal around conditional
+evidence, and narrowed differentiation after the 2025 patent find. No objection
+was answered by asserting real performance.

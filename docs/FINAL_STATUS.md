@@ -1,28 +1,20 @@
 # Final status
 
-## Classification
+Classification:
+`SUBMISSION_PACKAGE_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION`.
 
-`SUBMISSION_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION`
+The final v2.2 computational candidate, benchmark, proposal, three-round red team,
+prior-art audit and submission package are complete. The normal clean certificate
+is 36 frames, with early FLAG and a 60-frame diagnostic tail. Original-model v2.1
+false-clean is preserved; the different domain-shift benchmark shows lower
+observable-dirty false-clean and higher abstention.
 
-The English form-aligned proposal, claim audit, challenge mapping, prior-art
-screen, three figures, reproducible synthetic results and curated submission
-package are complete. Every public form section is below 500 words.
+No physical experiment, field timing, real sensitivity/specificity, LOD,
+repeatability, microbial performance, novelty or FTO has been established. Exact
+observation matching remains impossible and small-support stains remain the leading
+computational false-release family. Current maturity remains TRL 2.
 
-The major unvalidated assumption is that named real residues on named professional
-surface classes produce a repeatable, decision-useful change in the retained
-active-reflectance states while clean variation stays within the modeled bounds.
-No physical experiment has been executed. Current maturity is TRL 2.
-
-## Human gates before submission
-
-The participant must fill participation/experience fields, review and accept the
-logged-in agreement, confirm eligibility/IP/AI/tax/payment terms, and personally
-verify all wording. These are governance gates rather than missing technical text.
-
-## Important negatives
-
-- Optically invisible residue still false-cleans in the adversarial construction.
-- Common-mode dirty references are not solved by self-consistency.
-- Conservative modeled time exceeds 30 minutes for 25 m²; stress cases fail sooner.
-- No microbial, species, sterility, real LOD, field sensitivity/specificity,
-  whole-room, novelty or FTO claim is supported.
+Human gates: complete participant identity/experience; verify challenge eligibility,
+agreement, IP, AI, tax/payment and submission wording; obtain professional patent
+claim/FTO review; procure/build hardware; execute the preregistered coupon study;
+and decide whether the physical evidence supports submission or claim narrowing.

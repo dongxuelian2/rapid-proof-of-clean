@@ -81,3 +81,39 @@ a product-performance or proof-of-clean claim is not.
 
 **Date:** 2026-09-20
 **Status:** Accepted.
+
+## D-009 — Retain adaptive v2.2; reject 20-frame certificate
+
+**Decision:** Require full 12-state diversity plus controlled three-frequency
+evidence for proxy PASS at 36 frames; permit early FLAG and a 60-frame diagnostic.
+
+**Reason:** The 20-frame candidate raised observable-dirty domain-shift false-clean
+to 12.222%. v2.2 preserves v2.1's 5.568% in-model pixel false-clean and changes a
+20/20 endpoint-only midband false-clean into UNKNOWN.
+
+**Date:** 2026-09-20
+**Status:** Accepted; synthetic-only pending physical validation.
+
+## D-010 — Require dated anchor for clean release
+
+**Decision:** Live reference consensus is necessary but insufficient; proxy PASS
+requires a dated external anchor. Missing or drifting anchor becomes UNKNOWN.
+
+**Reason:** Multiple live references cannot identify self-consistent common-mode
+contamination. The anchor adds comparison information but still depends on
+independent certification.
+
+**Date:** 2026-09-20
+**Status:** Accepted as a workflow requirement.
+
+## D-011 — Stop computational expansion
+
+**Decision:** Freeze v2.2 as the final research candidate and do not open a new
+technical main line before physical coupons.
+
+**Reason:** Remaining high-value uncertainties are real contrast/noise, spatial
+support, reference lifecycle and field operation. Further threshold/simulator
+tuning would not validate them.
+
+**Date:** 2026-09-20
+**Status:** Accepted.

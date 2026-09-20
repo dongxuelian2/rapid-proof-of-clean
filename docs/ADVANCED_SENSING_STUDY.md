@@ -1,5 +1,12 @@
 # Advanced sensing study
 
+> Final selection: retain all 12 wavelength × angle × polarization states for the
+> clean-PASS certificate and three controlled structured-light frequencies. The
+> 20-frame four-corner/two-frequency option was rejected because it increased
+> observable-dirty domain-shift false-clean to 12.222%. Endpoint-only structured
+> sensing was reclassified from model-redundant to physically unresolved after a
+> midband-only response attack.
+
 Updated 2026-09-20. All implementation results are simulation-only. The active-
 reflectance / structured-light main line is unchanged.
 

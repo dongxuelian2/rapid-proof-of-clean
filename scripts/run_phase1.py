@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import subprocess
 import sys
 from dataclasses import replace
@@ -178,7 +179,7 @@ def run_failure_registry(
     for failure_index, kind in enumerate(FAILURES):
         for replicate in range(count):
             seed = int(experiment_cfg["fixed_seed"]) + failure_index * 100 + replicate
-            for method, (status, runtime) in candidate_statuses(
+            for method, (status, _runtime) in candidate_statuses(
                 cfg, cfg_controlled, v1_cfg, kind, seed
             ).items():
                 row = {
@@ -188,7 +189,10 @@ def run_failure_registry(
                     "observation_configuration": OBSERVATIONS[method],
                     "expected_behavior": "FLAG",
                     **summarize_status(status),
-                    "runtime_seconds": runtime,
+                    # Wall-clock microbenchmarks are machine/load dependent and
+                    # made an otherwise fixed-seed artifact non-reproducible.
+                    # Keep the schema while declining to present them as evidence.
+                    "runtime_seconds": None,
                     "nuisance_seed": seed,
                     "nuisance_parameters": (
                         "scene gain U(0.85,1.15); random phase; declared bounded noise; "
@@ -227,9 +231,7 @@ def aggregate_registry(rows: list[dict]) -> list[dict]:
                     "flag_rate": float(np.mean([row["flag_rate"] for row in selected])),
                     "unknown_rate": float(np.mean([row["unknown_rate"] for row in selected])),
                     "usable_coverage": float(np.mean([row["usable_coverage"] for row in selected])),
-                    "mean_runtime_seconds": float(
-                        np.mean([row["runtime_seconds"] for row in selected])
-                    ),
+                    "mean_runtime_seconds": None,
                 }
             )
     return aggregates
@@ -317,7 +319,12 @@ def frozen_baseline_regression() -> tuple[dict, str]:
     }
     if not all(result[key] for key in ("metrics_equal", "stress_equal", "original_tests_equal")):
         raise RuntimeError("Frozen v0 regression differs from reference_run")
-    return result, process.stdout
+    stable_stdout = re.sub(
+        r"Ran (\d+) tests in [0-9.]+s",
+        r"Ran \1 tests in <elapsed-not-recorded>",
+        process.stdout,
+    )
+    return result, stable_stdout
 
 
 def comparison_markdown(results: dict) -> str:

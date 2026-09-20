@@ -1,5 +1,11 @@
 # Frame-budget optimization
 
+> Final update: v2.1 below is the frozen fixed-budget baseline. The selected
+> v2.2 policy is documented in `ADAPTIVE_ACQUISITION.md`: a 36-frame clean-PASS
+> certificate, 2/4/12/28-frame early FLAG exits and optional 60-frame diagnostic.
+> It preserves v2.1's 5.568% in-model pixel false-clean and repairs the endpoint-
+> only midband domain-shift failure by returning UNKNOWN.
+
 Updated 2026-09-20. All numbers in this document are assumption-driven
 simulation results, not camera timing or physical sensitivity measurements.
 

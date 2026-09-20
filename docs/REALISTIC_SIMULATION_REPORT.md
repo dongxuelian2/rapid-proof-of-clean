@@ -1,5 +1,11 @@
 # Realistic simulation report
 
+> Final update: this document records the retained design simulator. A materially
+> different evaluation operator, sequential FOV benchmark and adversarial search
+> are reported in `DOMAIN_SHIFT_AND_ADVERSARIAL.md` and
+> `experiments/results/final_research_results.json`. Those results do not make this
+> simulator a validated digital twin.
+
 Updated 2026-09-20. Evidence class:
 `ASSUMPTION_DRIVEN_PHYSICALLY_MOTIVATED_SIMULATION_ONLY`. No physical experiment
 was executed.
