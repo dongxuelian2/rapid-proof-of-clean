@@ -1,17 +1,26 @@
-# Submission package
+# InnoCentive Submission Package
 
-Status: `SUBMISSION_PACKAGE_READY_WITH_MAJOR_UNVALIDATED_PHYSICAL_ASSUMPTION`.
+`FINAL_PROPOSAL.md` is organized under the eight requested form fields. The
+headings use the current form labels for Scientific Basis, Risks, Development
+Timeline and capability, and Online References. Copy each section into its
+matching field; the current page sets a 500-word limit for each narrative field,
+as stated on the [InnoCentive challenge page](https://www.innocentive.com/challenges/novel-technologies-for-rapid-proof-of-clean-in-professional-environments/).
+Check the live form before submission.
 
-Start with `FINAL_PROPOSAL.md`. `FINAL_CHALLENGE_FIT.md` maps public criteria;
-`CLAIM_AUDIT.md` traces every performance statement; `REFERENCES_AND_PRIOR_ART.md`
-explains overlap and search limits; `SPATIAL_CERTIFICATE_STUDY.md` records the
-PARTIAL small-support result. Figures are supplied in PNG and SVG.
+`CLAIM_AUDIT.md` maps the submitted claims to their evidence. It keeps exact
+adversarial and small-support figures in supporting evidence and identifies their
+synthetic limits. `SPATIAL_CERTIFICATE_STUDY.md` contains the fuller technical
+record; figures are supplied in PNG and SVG.
 
-Before submission, complete `HUMAN_FINAL_CHECKLIST.md`. The proposal still contains
-human-only placeholders for participation type and experience. No physical
-experiment has been executed, and the package is not evidence of microbial safety.
-The final technical candidate is v2.3: unchanged v2.2 sensing with a balanced
-multiscale FOV-release certificate, a 36-frame clean-PASS point, early FLAG exits
-and a 60-frame diagnostic tail. The spatial rule adds no measurement frames and
-has only a PARTIAL synthetic result. All benchmark and time numbers remain
-synthetic or assumption-driven.
+This is a **TRL 2** concept package. No physical experiment has been conducted.
+There is no measured real LOD, sensitivity, specificity, repeatability or field
+performance, and PASS carries no microbial, sterility or hygienic-safety meaning.
+Observation-matched residue remains a fundamental measurement limitation, and
+physical validation is required before any deployment claim.
+
+Before submission, complete `HUMAN_FINAL_CHECKLIST.md`. Replace the Experience
+placeholder with verifiable participant-provided facts; choose the participation
+type and partnering preference; enter TRL 2 as the solution level; and confirm
+that the proposed partnering role in the timeline matches the participant's
+actual capabilities. Personally verify eligibility, agreement/IP terms and any
+required AI disclosure. Do not submit the placeholder unchanged.
